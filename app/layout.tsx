@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/global/Navbar";
+import Enquiry from "@/components/global/Enquiry";
+import Chatbot from "@/components/global/Chatbot";
+import ScrollProgressBar from "@/components/global/ScrollProgressBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +27,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-white text-black">
+        <ScrollProgressBar />
+        <header className="fixed top-0 left-0 right-0 z-50 px-6 py-4 pointer-events-none">
+          <Navbar />
+        </header>
+        <main className="flex-1">{children}</main>
+        <Enquiry />
+        <Chatbot />
+      </body>
     </html>
   );
 }

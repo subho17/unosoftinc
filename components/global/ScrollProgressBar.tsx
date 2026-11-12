@@ -1,0 +1,43 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+export default function ScrollProgressBar() {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const updateProgress = () => {
+      const scrollTop = window.scrollY;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) {
+        setProgress(0);
+        return;
+      }
+      const next = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
+      setProgress(next);
+    };
+
+    updateProgress();
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress);
+
+    return () => {
+      window.removeEventListener("scroll", updateProgress);
+      window.removeEventListener("resize", updateProgress);
+    };
+  }, []);
+
+  return (
+    <div
+      aria-hidden="true"
+      className="fixed top-0 left-0 right-0 z-[60] h-1 bg-black/5 pointer-events-none"
+    >
+      <div
+        className="h-full bg-[#ff4d00] transition-[width] duration-75 ease-out shadow-[0_0_8px_rgba(255,77,0,0.5)]"
+        style={{ width: `${progress}%` }}
+      />
+    </div>
+  );
+}
+
