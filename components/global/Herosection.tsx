@@ -1,22 +1,110 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Herosection() {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const { innerWidth, innerHeight } = window;
+      const x = (e.clientX / innerWidth - 0.5) * 20;
+      const y = (e.clientY / innerHeight - 0.5) * 20;
+      setMousePos({ x, y });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   const scrollToNext = () => {
     window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
   };
 
   return (
     <section className="sticky top-0 z-0 w-full min-h-screen bg-white overflow-hidden flex items-end">
-      {/* Decorative background waves on white matching orange theme */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full bg-[#ff4d00]/8 blur-3xl" />
+      <style>{`
+        @keyframes hero-text-reveal {
+          0% {
+            opacity: 0;
+            transform: translateY(28px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes float-particle {
+          0%, 100% {
+            transform: translateY(0) translateX(0);
+            opacity: 0.35;
+          }
+          50% {
+            transform: translateY(-24px) translateX(12px);
+            opacity: 0.8;
+          }
+        }
+        .hero-reveal-1 {
+          animation: hero-text-reveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .hero-reveal-2 {
+          animation: hero-text-reveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.18s forwards;
+          opacity: 0;
+        }
+        .hero-reveal-3 {
+          animation: hero-text-reveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+          opacity: 0;
+        }
+      `}</style>
+
+      {/* Decorative Parallax Background Waves & Subtle Ambient Particles */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Glowing Orbs with Parallax */}
+        <div
+          className="absolute -top-32 -right-32 w-[540px] h-[540px] rounded-full bg-[#ff4d00]/10 blur-3xl transition-transform duration-700 ease-out"
+          style={{
+            transform: `translate3d(${mousePos.x * 1.5}px, ${mousePos.y * 1.5}px, 0)`,
+          }}
+        />
+        <div
+          className="absolute top-1/3 -left-20 w-[420px] h-[420px] rounded-full bg-[#ff8c5a]/8 blur-3xl transition-transform duration-700 ease-out"
+          style={{
+            transform: `translate3d(${-mousePos.x}px, ${-mousePos.y}px, 0)`,
+          }}
+        />
+
+        {/* Floating Subtle Particles */}
+        {[
+          { top: "18%", left: "15%", size: 6, delay: "0s", duration: "7s" },
+          { top: "32%", left: "75%", size: 8, delay: "1.2s", duration: "9s" },
+          { top: "65%", left: "85%", size: 5, delay: "2.4s", duration: "8s" },
+          { top: "25%", left: "45%", size: 7, delay: "0.8s", duration: "10s" },
+          { top: "72%", left: "28%", size: 6, delay: "3s", duration: "7.5s" },
+          { top: "45%", left: "62%", size: 9, delay: "1.6s", duration: "8.5s" },
+        ].map((pt, i) => (
+          <span
+            key={i}
+            className="absolute rounded-full bg-[#ff4d00]"
+            style={{
+              top: pt.top,
+              left: pt.left,
+              width: `${pt.size}px`,
+              height: `${pt.size}px`,
+              animation: `float-particle ${pt.duration} ease-in-out infinite ${pt.delay}`,
+            }}
+          />
+        ))}
+
+        {/* Parallax SVG Background Waves */}
         <svg
-          className="absolute top-0 right-0 w-[75%] h-full"
+          className="absolute top-0 right-0 w-[75%] h-full transition-transform duration-700 ease-out"
           viewBox="0 0 800 600"
           fill="none"
           preserveAspectRatio="xMaxYMin slice"
+          style={{
+            transform: `translate3d(${mousePos.x * 0.6}px, ${mousePos.y * 0.6}px, 0)`,
+          }}
         >
           <path
             d="M400 0C300 100 350 250 500 300C650 350 700 200 800 150V0H400Z"
@@ -36,33 +124,37 @@ export default function Herosection() {
         </svg>
       </div>
 
-      {/* Content */}
+      {/* Content with Text Reveal Animations */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pb-16">
         <div className="w-full">
-          {/* Heading strictly in 2 lines */}
+          {/* Heading strictly in 2 lines with staggered text reveal */}
           <h1 className="text-[clamp(1.2rem,4.2vw,3.75rem)] font-bold leading-tight text-[#0b1324] tracking-tight">
-            <span className="block whitespace-nowrap">
-              Technical consulting that
+            <span className="block whitespace-nowrap overflow-hidden">
+              <span className="block hero-reveal-1">
+                Technical consulting that
+              </span>
             </span>
-            <span className="block whitespace-nowrap">
-              drives{" "}
-              <span className="text-[#ff4d00]">business transformation.</span>
+            <span className="block whitespace-nowrap overflow-hidden">
+              <span className="block hero-reveal-2">
+                drives{" "}
+                <span className="text-[#ff4d00]">business transformation.</span>
+              </span>
             </span>
           </h1>
 
           {/* Subtext */}
-          <p className="mt-6 text-sm md:text-base text-gray-600 leading-relaxed max-w-lg">
+          <p className="mt-6 text-sm md:text-base text-gray-600 leading-relaxed max-w-lg hero-reveal-3">
             We are strategic business technology advisors committed to driving
             meaningful business transformation.
           </p>
 
           {/* CTA Button */}
-          <div className="mt-8">
+          <div className="mt-8 hero-reveal-3">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-[#ff4d00] hover:bg-[#e04300] text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors"
+              className="inline-flex items-center gap-2 bg-[#ff4d00] hover:bg-[#e04300] text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
-              Schedule a Free Consultation
+              <span>Schedule a Free Consultation</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-4 h-4"
@@ -125,3 +217,4 @@ export default function Herosection() {
     </section>
   );
 }
+

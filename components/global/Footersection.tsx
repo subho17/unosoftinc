@@ -1,21 +1,22 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 
 const ourServices = [
-  { label: "UI/UX Design", href: "/services/ui-ux-design" },
-  { label: "Web Development", href: "/services/web-design" },
-  { label: "Mobile App Design", href: "/services/mobile-app" },
-  { label: "Brand Identity", href: "/services/brand-identity" },
-  { label: "E-Commerce Solutions", href: "/services/e-commerce" },
+  { label: "UI/UX Design", href: "/services" },
+  { label: "Web Development", href: "/services" },
+  { label: "Mobile App Design", href: "/services" },
+  { label: "Brand Identity", href: "/services" },
+  { label: "E-Commerce Solutions", href: "/services" },
 ];
 
 const companyLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Solutions", href: "/solutions" },
+  { label: "Solutions", href: "/services" },
   { label: "Blogs", href: "/blog" },
   { label: "Contact Us", href: "/contact" },
   { label: "Portfolio", href: "/portfolio" },
@@ -67,7 +68,7 @@ export default function Footersection() {
   };
 
   return (
-    <footer className="relative z-[45] w-full min-h-screen bg-[#141414] rounded-t-3xl px-6 sm:px-10 md:px-14 pt-12 pb-8 text-white shadow-[0_-24px_60px_rgba(0,0,0,0.28)] flex flex-col justify-between">
+    <footer className="relative z-50 w-full bg-[#141414] rounded-t-3xl px-6 sm:px-10 md:px-14 pt-12 pb-8 text-white shadow-[0_-24px_60px_rgba(0,0,0,0.35)] flex flex-col justify-between">
       <div className="w-full max-w-7xl mx-auto flex-1 flex flex-col justify-between gap-10">
         {/* Top CTA Banner */}
         <div className="bg-[#1e1e1e] border border-white/10 rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
@@ -109,12 +110,13 @@ export default function Footersection() {
           {/* Column 1: Brand & Overview */}
           <div className="space-y-4">
             <Link href="/" className="inline-flex items-center gap-2.5">
-              <span className="w-9 h-9 rounded-full bg-[#ff4d00] text-white font-bold text-lg flex items-center justify-center">
-                U
-              </span>
-              <span className="text-2xl font-bold tracking-tight text-white">
-                Studio<span className="text-[#ff4d00]">Demo</span>
-              </span>
+              <Image
+                src="/logo-transparent.png"
+                alt="UnoSoft Logo"
+                width={140}
+                height={50}
+                className="h-9 w-auto object-contain"
+              />
             </Link>
 
             <p className="text-xs text-gray-300 leading-relaxed">

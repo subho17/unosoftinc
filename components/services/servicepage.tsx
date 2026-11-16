@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface ServiceItem {
   title: string;
@@ -16,7 +16,7 @@ interface ServiceItem {
 const services: ServiceItem[] = [
   {
     title: "UI/UX Design",
-    href: "/services/ui-ux-design",
+    href: "/contact",
     cardBg: "bg-[#262626]",
     cardBorder: "border border-white/15",
     layerBg: "bg-white/10",
@@ -111,7 +111,7 @@ const services: ServiceItem[] = [
   },
   {
     title: "Web Design",
-    href: "/services/web-design",
+    href: "/contact",
     cardBg: "bg-[#ff4d00]",
     cardBorder: "border border-[#ff6a2b]/40",
     layerBg: "bg-white/25",
@@ -194,7 +194,7 @@ const services: ServiceItem[] = [
   },
   {
     title: "Landing Page",
-    href: "/services/landing-page",
+    href: "/contact",
     cardBg: "bg-[#262626]",
     cardBorder: "border border-white/15",
     layerBg: "bg-white/10",
@@ -270,7 +270,7 @@ const services: ServiceItem[] = [
   },
   {
     title: "Mobile App",
-    href: "/services/mobile-app",
+    href: "/contact",
     cardBg: "bg-[#ff4d00]",
     cardBorder: "border border-[#ff6a2b]/40",
     layerBg: "bg-white/25",
@@ -327,7 +327,7 @@ const services: ServiceItem[] = [
   },
   {
     title: "Brand Identity",
-    href: "/services/brand-identity",
+    href: "/contact",
     cardBg: "bg-[#262626]",
     cardBorder: "border border-white/15",
     layerBg: "bg-white/10",
@@ -384,7 +384,7 @@ const services: ServiceItem[] = [
   },
   {
     title: "E-Commerce",
-    href: "/services/e-commerce",
+    href: "/contact",
     cardBg: "bg-[#ff4d00]",
     cardBorder: "border border-[#ff6a2b]/40",
     layerBg: "bg-white/25",
@@ -452,11 +452,43 @@ const services: ServiceItem[] = [
 ];
 
 function ServiceCard({ service }: { service: ServiceItem }) {
+  const [tilt, setTilt] = useState({ x: 0, y: 0, active: false });
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -8;
+    const rotateY = ((x - centerX) / centerX) * 8;
+    setTilt({ x: rotateX, y: rotateY, active: true });
+  };
+
+  const handleMouseLeave = () => {
+    setTilt({ x: 0, y: 0, active: false });
+  };
+
   return (
-    <Link
-      href={service.href}
-      className="group relative block w-[320px] sm:w-[360px] lg:w-[400px] shrink-0 transition-transform duration-300 hover:-translate-y-1"
+    <div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="shrink-0"
+      style={{
+        transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) scale3d(${
+          tilt.active ? 1.025 : 1
+        }, ${tilt.active ? 1.025 : 1}, 1)`,
+        transition: tilt.active ? "transform 0.1s ease-out" : "transform 0.5s ease-out",
+        transformStyle: "preserve-3d",
+      }}
     >
+      <Link
+        href={service.href}
+        className="group relative block w-[320px] sm:w-[360px] lg:w-[400px]"
+      >
       {/* Card body */}
       <div
         className={`relative ${service.cardBg} ${service.cardBorder} rounded-3xl flex flex-col pt-7 overflow-hidden`}
@@ -515,6 +547,7 @@ function ServiceCard({ service }: { service: ServiceItem }) {
         </svg>
       </div>
     </Link>
+    </div>
   );
 }
 
