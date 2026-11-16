@@ -88,7 +88,7 @@ export default function MissionVision() {
           xmlns="http://www.w3.org/2000/svg"
           width={24}
           height={24}
-          className="w-6 h-6 text-[#ff4d00]"
+          className="w-6 h-6 text-[#0083d1]"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -111,7 +111,7 @@ export default function MissionVision() {
           xmlns="http://www.w3.org/2000/svg"
           width={24}
           height={24}
-          className="w-6 h-6 text-[#ff4d00]"
+          className="w-6 h-6 text-[#0083d1]"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -134,7 +134,7 @@ export default function MissionVision() {
           xmlns="http://www.w3.org/2000/svg"
           width={24}
           height={24}
-          className="w-6 h-6 text-[#ff4d00]"
+          className="w-6 h-6 text-[#0083d1]"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -157,7 +157,7 @@ export default function MissionVision() {
           xmlns="http://www.w3.org/2000/svg"
           width={24}
           height={24}
-          className="w-6 h-6 text-[#ff4d00]"
+          className="w-6 h-6 text-[#0083d1]"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -184,17 +184,17 @@ export default function MissionVision() {
           <div className="w-full max-w-5xl mx-auto flex flex-col items-center">
             {/* Header Badge & Title */}
             <div className="flex flex-col items-center text-center mb-6 sm:mb-8">
-              <div className="inline-flex items-center gap-2 bg-[#fff1ec] border border-[#ff4d00]/20 text-[#ff4d00] text-xs font-semibold px-4 py-1.5 rounded-full mb-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+              <div className="inline-flex items-center gap-2 bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] text-xs font-semibold px-4 py-1.5 rounded-full mb-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
                 <span className="tracking-widest uppercase text-[11px] font-bold">
                   OUR COMPASS
                 </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
               </div>
 
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#0b1324]">
                 Mission &amp;{" "}
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#ff4d00] via-[#ff7a3d] to-[#ff4d00]">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0083d1] via-[#2997dc] to-[#0083d1]">
                   Vision
                 </span>
               </h2>
@@ -208,9 +208,8 @@ export default function MissionVision() {
               <div className="mt-3.5 flex flex-col items-center gap-1.5">
                 <div className="inline-flex items-center gap-2 text-[11px] font-medium text-gray-600 bg-white border border-gray-200/90 px-3.5 py-1 rounded-full shadow-2xs">
                   <span
-                    className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                      isClosed ? "bg-emerald-500 animate-pulse" : "bg-[#ff4d00]"
-                    }`}
+                    className={`w-2 h-2 rounded-full transition-colors duration-300 ${isClosed ? "bg-emerald-500 animate-pulse" : "bg-[#0083d1]"
+                      }`}
                   />
                   <span>
                     {isClosed
@@ -220,7 +219,7 @@ export default function MissionVision() {
                 </div>
                 <div className="w-32 h-1 bg-gray-200/80 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-[#ff4d00] rounded-full transition-all duration-75"
+                    className="h-full bg-[#0083d1] rounded-full transition-all duration-75"
                     style={{ width: `${progressPercent}%` }}
                   />
                 </div>
@@ -232,11 +231,10 @@ export default function MissionVision() {
               <div className="flex flex-col md:flex-row items-stretch justify-center w-full">
                 {/* Left Card: Our Vision */}
                 <div
-                  className={`w-full md:w-1/2 bg-white border border-gray-200/90 shadow-lg overflow-hidden flex flex-col justify-between transition-[border-radius,box-shadow,border-color] duration-500 ${
-                    isClosed
-                      ? "rounded-t-3xl md:rounded-tr-none md:rounded-l-3xl border-b-0 md:border-b md:border-r border-gray-200"
-                      : "rounded-3xl mb-4 md:mb-0"
-                  }`}
+                  className={`w-full md:w-1/2 bg-white border border-gray-200/90 shadow-lg overflow-hidden flex flex-col justify-between transition-[border-radius,box-shadow,border-color] duration-500 ${isClosed
+                    ? "rounded-t-3xl md:rounded-tr-none md:rounded-l-3xl border-b-0 md:border-b md:border-r border-gray-200"
+                    : "rounded-3xl mb-4 md:mb-0"
+                    }`}
                   style={{
                     transform: isMobile
                       ? `translate3d(0, ${mobileTopOffset}px, 0)`
@@ -250,6 +248,7 @@ export default function MissionVision() {
                       src="/about-hero.jpg"
                       alt="Our Vision - Digital Leadership and Innovation"
                       fill
+                      priority
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover object-center grayscale contrast-115 hover:scale-105 transition-transform duration-700"
                     />
@@ -260,7 +259,7 @@ export default function MissionVision() {
                   <div className="p-6 sm:p-7 md:p-8 flex-1 flex flex-col justify-start bg-white">
                     {/* Orange triangle corner accent */}
                     <div
-                      className="w-0 h-0 border-t-[30px] border-t-[#ff4d00] border-r-[30px] border-r-transparent mb-4"
+                      className="w-0 h-0 border-t-[30px] border-t-[#0083d1] border-r-[30px] border-r-transparent mb-4"
                       aria-hidden="true"
                     />
 
@@ -280,11 +279,10 @@ export default function MissionVision() {
 
                 {/* Right Card: Our Mission */}
                 <div
-                  className={`w-full md:w-1/2 bg-white border border-gray-200/90 shadow-lg overflow-hidden flex flex-col justify-between transition-[border-radius,box-shadow,border-color] duration-500 ${
-                    isClosed
-                      ? "rounded-b-3xl md:rounded-bl-none md:rounded-r-3xl border-t-0 md:border-t md:border-l-0 border-gray-200"
-                      : "rounded-3xl"
-                  }`}
+                  className={`w-full md:w-1/2 bg-white border border-gray-200/90 shadow-lg overflow-hidden flex flex-col justify-between transition-[border-radius,box-shadow,border-color] duration-500 ${isClosed
+                    ? "rounded-b-3xl md:rounded-bl-none md:rounded-r-3xl border-t-0 md:border-t md:border-l-0 border-gray-200"
+                    : "rounded-3xl"
+                    }`}
                   style={{
                     transform: isMobile
                       ? `translate3d(0, ${mobileBottomOffset}px, 0)`
@@ -308,7 +306,7 @@ export default function MissionVision() {
                   <div className="p-6 sm:p-7 md:p-8 flex-1 flex flex-col justify-start bg-white">
                     {/* Orange triangle corner accent */}
                     <div
-                      className="w-0 h-0 border-t-[30px] border-t-[#ff4d00] border-r-[30px] border-r-transparent mb-4"
+                      className="w-0 h-0 border-t-[30px] border-t-[#0083d1] border-r-[30px] border-r-transparent mb-4"
                       aria-hidden="true"
                     />
 
@@ -349,7 +347,7 @@ export default function MissionVision() {
               key={v.title}
               className="bg-white border border-gray-100 rounded-2xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-md transition-shadow"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#fff1ec] flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-xl bg-[#e8f4fc] flex items-center justify-center mb-4">
                 {v.icon}
               </div>
               <h4 className="text-base font-bold text-[#0b1324] mb-2">

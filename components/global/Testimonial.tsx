@@ -61,7 +61,7 @@ function TestimonialCard({ item }: { item: TestimonialItem }) {
       <div>
         {/* Rating */}
         <div className="flex items-center gap-2.5">
-          <div className="flex items-center gap-1 text-[#ff4d00]">
+          <div className="flex items-center gap-1 text-[#0083d1]">
             {Array.from({ length: 5 }).map((_, i) => (
               <svg
                 key={i}
@@ -201,7 +201,7 @@ export default function Testimonial() {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight tracking-tight">
           Testimonials that
           <br />
-          Speak to <span className="text-[#ff4d00]">My Results</span>
+          Speak to <span className="text-[#0083d1]">My Results</span>
         </h2>
 
         <p className="mt-4 text-xs sm:text-sm text-gray-300 leading-relaxed max-w-lg mx-auto">
@@ -254,7 +254,7 @@ export default function Testimonial() {
           type="button"
           onClick={() => nudgeTrack(-400)}
           aria-label="Next testimonial"
-          className="w-11 h-11 rounded-full bg-[#ff4d00] hover:bg-[#e04300] text-white flex items-center justify-center transition-colors cursor-pointer"
+          className="w-11 h-11 rounded-full bg-[#0083d1] hover:bg-[#006eb0] text-white flex items-center justify-center transition-colors cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

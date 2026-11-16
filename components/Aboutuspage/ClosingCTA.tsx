@@ -6,20 +6,20 @@ export default function ClosingCTA() {
       <div className="w-full max-w-6xl mx-auto">
         <div className="relative bg-gradient-to-br from-[#0b1324] via-[#141d33] to-[#0b1324] text-white rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl overflow-hidden border border-white/10">
           {/* Ambient Orange Glow */}
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#ff4d00]/20 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#ff4d00]/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#0083d1]/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#0083d1]/15 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-3xl mx-auto text-center space-y-6">
             {/* Pill */}
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/15 text-[#ff4d00] text-xs font-semibold px-4 py-1.5 rounded-full">
-              <span className="w-2 h-2 rounded-full bg-[#ff4d00] animate-pulse" />
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/15 text-[#0083d1] text-xs font-semibold px-4 py-1.5 rounded-full">
+              <span className="w-2 h-2 rounded-full bg-[#0083d1] animate-pulse" />
               <span className="text-white">START YOUR PROJECT WITH UNOSOFT</span>
             </div>
 
             {/* Headline */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
               Ready to build something{" "}
-              <span className="text-[#ff4d00]">extraordinary?</span>
+              <span className="text-[#0083d1]">extraordinary?</span>
             </h2>
 
             {/* Subtitle */}
@@ -33,7 +33,7 @@ export default function ClosingCTA() {
             <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-[#ff4d00] hover:bg-[#e04300] text-white text-xs sm:text-sm font-semibold px-8 py-3.5 rounded-full transition-all shadow-lg hover:shadow-[#ff4d00]/30 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 bg-[#0083d1] hover:bg-[#006eb0] text-white text-xs sm:text-sm font-semibold px-8 py-3.5 rounded-full transition-all shadow-lg hover:shadow-[#0083d1]/30 hover:-translate-y-0.5"
               >
                 <span>Schedule a Free Consultation</span>
                 <span className="text-base">→</span>

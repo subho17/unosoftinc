@@ -37,7 +37,7 @@ const teamMembers: TeamMember[] = [
     skin: "#e4b299",
     hair: "#2c1e16",
     shirt: "#f59e0b",
-    bgGradient: "from-amber-100 via-orange-100 to-purple-200",
+    bgGradient: "from-amber-100 via-sky-100 to-purple-200",
   },
   {
     name: "Viola Bassett",
@@ -143,7 +143,7 @@ export default function Teamsection() {
         className="pointer-events-none absolute top-24 right-8 w-52 h-52 opacity-30 hidden lg:block"
         style={{
           backgroundImage:
-            "radial-gradient(circle, #fed7aa 1.5px, transparent 1.5px)",
+            "radial-gradient(circle, #bae6fd 1.5px, transparent 1.5px)",
           backgroundSize: "14px 14px",
         }}
       />
@@ -153,10 +153,10 @@ export default function Teamsection() {
         {/* Remote & Hiring Pill */}
         <Link
           href="/contact"
-          className="inline-flex items-center gap-2.5 bg-white border border-gray-200 rounded-full px-3.5 py-1 text-xs text-gray-600 shadow-2xs hover:border-[#ff4d00]/50 transition-colors"
+          className="inline-flex items-center gap-2.5 bg-white border border-gray-200 rounded-full px-3.5 py-1 text-xs text-gray-600 shadow-2xs hover:border-[#0083d1]/50 transition-colors"
         >
           <span className="inline-flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-[#ff4d00]" />
+            <span className="w-2 h-2 rounded-full bg-[#0083d1]" />
             We&apos;re 100% remote and hiring
           </span>
           <span className="text-gray-300">|</span>
@@ -165,7 +165,7 @@ export default function Teamsection() {
 
         {/* Heading */}
         <h2 className="mt-5 text-3xl sm:text-4xl md:text-5xl font-bold text-[#0b1324] tracking-tight">
-          Meet <span className="text-[#ff4d00]">our</span> beautiful team
+          Meet <span className="text-[#0083d1]">our</span> beautiful team
         </h2>
 
         {/* Subtitle */}
@@ -185,7 +185,7 @@ export default function Teamsection() {
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center bg-[#111111] hover:bg-[#ff4d00] text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-full transition-colors"
+            className="inline-flex items-center justify-center bg-[#111111] hover:bg-[#0083d1] text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-full transition-colors"
           >
             Get started
           </Link>
@@ -208,7 +208,7 @@ export default function Teamsection() {
                   member.bgGradient
                 } ${
                   isActive
-                    ? "-translate-y-4 scale-[1.04] shadow-[0_24px_48px_rgba(255,77,0,0.18)] ring-1 ring-[#ff4d00]/30 grayscale-0"
+                    ? "-translate-y-4 scale-[1.04] shadow-[0_24px_48px_rgba(0,131,209,0.18)] ring-1 ring-[#0083d1]/30 grayscale-0"
                     : "grayscale opacity-90 hover:opacity-100 border border-gray-200/80"
                 }`}
               >

@@ -63,12 +63,12 @@ export default function Faqsection() {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-[#262626] border border-white/15 rounded-full px-4 py-1.5 text-[11px] font-medium tracking-wider text-gray-300 uppercase">
             <span>010</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
             <span>FAQS</span>
           </div>
 
           <h2 className="mt-5 text-3xl sm:text-4xl md:text-5xl font-semibold text-white tracking-tight">
-            Common <span className="text-[#ff4d00]">Questions</span>
+            Common <span className="text-[#0083d1]">Questions</span>
           </h2>
         </div>
 
@@ -82,7 +82,7 @@ export default function Faqsection() {
                 key={faq.number}
                 className={`rounded-2xl transition-all duration-200 ${
                   isOpen
-                    ? "bg-[#262626] border border-[#ff4d00]/80 shadow-[0_0_30px_rgba(255,77,0,0.12)]"
+                    ? "bg-[#262626] border border-[#0083d1]/80 shadow-[0_0_30px_rgba(0,131,209,0.12)]"
                     : "bg-[#262626] border border-white/15 hover:border-white/25"
                 }`}
               >
@@ -96,7 +96,7 @@ export default function Faqsection() {
                     <span
                       className={`w-7 h-7 rounded-full text-xs font-semibold flex items-center justify-center shrink-0 transition-colors ${
                         isOpen
-                          ? "bg-[#ff4d00] text-white"
+                          ? "bg-[#0083d1] text-white"
                           : "bg-[#141414] border border-white/15 text-gray-300"
                       }`}
                     >
@@ -110,7 +110,7 @@ export default function Faqsection() {
                   <span
                     className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${
                       isOpen
-                        ? "bg-[#ff4d00] text-white"
+                        ? "bg-[#0083d1] text-white"
                         : "bg-[#141414] border border-white/15 text-white"
                     }`}
                   >
@@ -167,10 +167,10 @@ export default function Faqsection() {
           </p>
           <Link
             href="/contact"
-            className="mt-2 inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[#ff4d00] transition-colors"
+            className="mt-2 inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[#0083d1] transition-colors"
           >
             <span className="underline underline-offset-4">Contact Us</span>
-            <span className="w-5 h-5 rounded-full bg-[#ff4d00] text-white flex items-center justify-center">
+            <span className="w-5 h-5 rounded-full bg-[#0083d1] text-white flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-3 h-3"

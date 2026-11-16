@@ -30,7 +30,7 @@ Your site is live!
 
 ### Step 1: Build the standalone project
 ```bash
-npm run build
+npm run build:standalone
 ```
 This generates `.next/standalone` with a lightweight, optimized `server.js` and dependencies.
 

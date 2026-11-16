@@ -5,12 +5,16 @@ import Enquiry from "@/components/global/Enquiry";
 import Chatbot from "@/components/global/Chatbot";
 import ScrollProgressBar from "@/components/global/ScrollProgressBar";
 
-// Set NEXT_PUBLIC_SITE_URL (e.g. https://unosoftinc.com) in the deploy
-// environment so Open Graph / canonical URLs resolve to absolute addresses.
+// Absolute URL used for Open Graph images and canonical links.
+// Priority: explicit site URL -> Vercel production domain -> hard-coded fallback.
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "https://unosoftinc.com");
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://unosoftinc.com",
-  ),
+  metadataBase: new URL(siteUrl),
   title: "unosoftinc | Technical Consulting & Digital Product Agency",
   description:
     "We are strategic business technology advisors committed to driving meaningful business transformation through UI/UX design and modern web development.",

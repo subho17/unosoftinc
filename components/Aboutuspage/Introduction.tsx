@@ -13,16 +13,16 @@ export default function Introduction() {
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 sm:gap-10">
           {/* Left: Pill & Heading */}
           <div className="lg:max-w-xl">
-            <div className="inline-flex items-center gap-2 bg-[#fff1ec] border border-[#ff4d00]/20 text-[#ff4d00] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+            <div className="inline-flex items-center gap-2 bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
               <span className="tracking-widest uppercase text-[11px] font-bold">
                 ABOUT US
               </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#0b1324] leading-[1.2]">
-              <span className="text-[#ff4d00]">Introduction</span> To Best
+              <span className="text-[#0083d1]">Introduction</span> To Best
               <br />
               Digital Agency!
             </h2>
@@ -47,7 +47,7 @@ export default function Introduction() {
         <div className="mt-12 sm:mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1: Best Price Guaranteed */}
           <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full bg-[#ff4d00] text-white flex items-center justify-center shrink-0 shadow-md">
+            <div className="w-14 h-14 rounded-full bg-[#0083d1] text-white flex items-center justify-center shrink-0 shadow-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={24}
@@ -112,7 +112,7 @@ export default function Introduction() {
 
           {/* Card 3: Professional Team */}
           <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full bg-[#ff4d00] text-white flex items-center justify-center shrink-0 shadow-md">
+            <div className="w-14 h-14 rounded-full bg-[#0083d1] text-white flex items-center justify-center shrink-0 shadow-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={24}
@@ -176,9 +176,9 @@ export default function Introduction() {
             >
               <div className="relative flex items-center justify-center">
                 {/* Ping wave */}
-                <span className="absolute w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#ff4d00]/30 animate-ping" />
+                <span className="absolute w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#0083d1]/30 animate-ping" />
                 {/* Main button */}
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#ff4d00] hover:bg-[#e04300] text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#0083d1] hover:bg-[#006eb0] text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={28}
@@ -216,7 +216,7 @@ export default function Introduction() {
                 type="button"
                 onClick={() => setIsPlaying(false)}
                 aria-label="Close Video"
-                className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/60 hover:bg-[#ff4d00] text-white flex items-center justify-center text-sm transition-colors cursor-pointer"
+                className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/60 hover:bg-[#0083d1] text-white flex items-center justify-center text-sm transition-colors cursor-pointer"
               >
                 ✕
               </button>

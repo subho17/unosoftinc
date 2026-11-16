@@ -1,4 +1,7 @@
-# Enable Rewrite Engine
+# ---------------------------------------------------------------------------
+# UnoSoft — static Next.js export (Hostinger / Apache / LiteSpeed)
+# ---------------------------------------------------------------------------
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -11,15 +14,25 @@
   RewriteRule ^careers/?$ /contact [L,R=301]
   RewriteRule ^solutions/?$ /services [L,R=301]
 
-  # Route pretty URLs to .html files
-  RewriteCond %{REQUEST_FILENAME} !-d
+  # Canonical: drop the trailing slash from anything that is not a real file.
+  # ("^(.+?)" rather than "^(.*?)" so that "/" itself is never redirected.)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.+?)/+$ /$1 [L,R=301]
+
+  # Extensionless URL -> matching .html file.
+  # IMPORTANT: the export writes a same-named directory next to every .html file
+  # (e.g. /about/ containing RSC payloads). We therefore must NOT skip
+  # directories here, otherwise /about resolves to the directory and 403s.
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-  RewriteRule ^(.*)$ $1.html [L]
-
-  # Fallback 404
-  ErrorDocument 404 /404.html
+  RewriteRule ^(.*?)/?$ $1.html [L]
 </IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.html
+</IfModule>
+
+ErrorDocument 404 /404.html
 
 # Browser Caching
 <IfModule mod_expires.c>
@@ -33,3 +46,9 @@
   ExpiresByType application/javascript "access plus 1 month"
 </IfModule>
 
+# Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>

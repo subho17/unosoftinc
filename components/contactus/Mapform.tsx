@@ -3,8 +3,8 @@ export default function Mapform() {
     <section className="w-full bg-white py-14 sm:py-20 px-4 sm:px-8 md:px-12">
       <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
         {/* Badge: * Our Location */}
-        <div className="inline-flex items-center gap-2 bg-[#fff1ec] border border-[#ff4d00]/20 text-[#ff4d00] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
-          <span className="text-base leading-none text-[#ff4d00]">✱</span>
+        <div className="inline-flex items-center gap-2 bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
+          <span className="text-base leading-none text-[#0083d1]">✱</span>
           <span>Our Location</span>
         </div>
 
@@ -26,7 +26,7 @@ export default function Mapform() {
 
           {/* Location details card floating at bottom-left */}
           <div className="hidden sm:flex absolute bottom-5 left-5 bg-white/95 backdrop-blur-md border border-gray-200/80 rounded-2xl p-4 shadow-lg max-w-xs items-center gap-3.5 z-10">
-            <div className="w-10 h-10 rounded-xl bg-[#ff4d00]/10 text-[#ff4d00] flex items-center justify-center shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-[#0083d1]/10 text-[#0083d1] flex items-center justify-center shrink-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-5 h-5"

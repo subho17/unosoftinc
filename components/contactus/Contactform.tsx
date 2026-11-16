@@ -26,9 +26,9 @@ export default function Contactform() {
   };
 
   return (
-    <section className="relative w-full bg-gradient-to-b from-[#fff2ec]/70 via-[#fff8f5]/40 to-white pt-24 sm:pt-28 pb-16 px-4 sm:px-8 md:px-12 overflow-hidden">
+    <section className="relative w-full bg-gradient-to-b from-[#e8f4fc]/70 via-[#f2f8fd]/40 to-white pt-24 sm:pt-28 pb-16 px-4 sm:px-8 md:px-12 overflow-hidden">
       {/* Soft background ambient glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[720px] h-[340px] bg-gradient-to-b from-[#ff8c5a]/20 via-[#ff4d00]/10 to-transparent blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[720px] h-[340px] bg-gradient-to-b from-[#3ba2e3]/20 via-[#0083d1]/10 to-transparent blur-3xl pointer-events-none" />
 
       <div className="relative z-10 w-full max-w-6xl mx-auto">
         {/* Hero Header */}
@@ -38,14 +38,14 @@ export default function Contactform() {
           </h1>
 
           {/* Breadcrumb pill */}
-          <div className="mt-4 inline-flex items-center gap-2 bg-white/90 border border-orange-200/60 shadow-xs px-4 py-1.5 rounded-full text-xs font-medium text-gray-600">
+          <div className="mt-4 inline-flex items-center gap-2 bg-white/90 border border-sky-200/60 shadow-xs px-4 py-1.5 rounded-full text-xs font-medium text-gray-600">
             <Link
               href="/"
-              className="inline-flex items-center gap-1.5 text-gray-700 hover:text-[#ff4d00] transition-colors"
+              className="inline-flex items-center gap-1.5 text-gray-700 hover:text-[#0083d1] transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-3.5 h-3.5 text-[#ff4d00]"
+                className="w-3.5 h-3.5 text-[#0083d1]"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -54,7 +54,7 @@ export default function Contactform() {
               <span>Home</span>
             </Link>
             <span className="text-gray-300">›</span>
-            <span className="text-[#ff4d00] font-semibold">Contact Us</span>
+            <span className="text-[#0083d1] font-semibold">Contact Us</span>
           </div>
         </div>
 
@@ -76,7 +76,7 @@ export default function Contactform() {
             <div className="mt-8 space-y-6">
               {/* Phone */}
               <div className="flex items-start gap-4 pb-5 border-b border-gray-100">
-                <div className="w-11 h-11 rounded-2xl bg-[#fff2ec] border border-[#ff4d00]/20 text-[#ff4d00] flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 rounded-2xl bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] flex items-center justify-center shrink-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-5 h-5"
@@ -98,7 +98,7 @@ export default function Contactform() {
                   </h3>
                   <a
                     href="tel:+11234567890"
-                    className="mt-1 block text-sm font-semibold text-[#0b1324] hover:text-[#ff4d00] transition-colors"
+                    className="mt-1 block text-sm font-semibold text-[#0b1324] hover:text-[#0083d1] transition-colors"
                   >
                     (123) 456-7890
                   </a>
@@ -107,7 +107,7 @@ export default function Contactform() {
 
               {/* Email */}
               <div className="flex items-start gap-4 pb-5 border-b border-gray-100">
-                <div className="w-11 h-11 rounded-2xl bg-[#fff2ec] border border-[#ff4d00]/20 text-[#ff4d00] flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 rounded-2xl bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] flex items-center justify-center shrink-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-5 h-5"
@@ -129,7 +129,7 @@ export default function Contactform() {
                   </h3>
                   <a
                     href="mailto:admin@example.com"
-                    className="mt-1 block text-sm font-semibold text-[#0b1324] hover:text-[#ff4d00] transition-colors"
+                    className="mt-1 block text-sm font-semibold text-[#0b1324] hover:text-[#0083d1] transition-colors"
                   >
                     admin@example.com
                   </a>
@@ -138,7 +138,7 @@ export default function Contactform() {
 
               {/* Opening Hour */}
               <div className="flex items-start gap-4 pb-5 border-b border-gray-100">
-                <div className="w-11 h-11 rounded-2xl bg-[#fff2ec] border border-[#ff4d00]/20 text-[#ff4d00] flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 rounded-2xl bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] flex items-center justify-center shrink-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-5 h-5"
@@ -166,7 +166,7 @@ export default function Contactform() {
 
               {/* Our Location */}
               <div className="flex items-start gap-4">
-                <div className="w-11 h-11 rounded-2xl bg-[#fff2ec] border border-[#ff4d00]/20 text-[#ff4d00] flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 rounded-2xl bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] flex items-center justify-center shrink-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-5 h-5"
@@ -202,8 +202,8 @@ export default function Contactform() {
           {/* Right Column: Get In Touch Form */}
           <div className="lg:col-span-7 bg-white border border-gray-200/80 rounded-3xl p-7 sm:p-9 shadow-[0_12px_40px_rgba(0,0,0,0.04)]">
             {/* Badge: * Get In Touch */}
-            <div className="inline-flex items-center gap-2 bg-[#fff1ec] border border-[#ff4d00]/20 text-[#ff4d00] text-xs font-semibold px-4 py-1.5 rounded-full mb-3">
-              <span className="text-base leading-none text-[#ff4d00]">✱</span>
+            <div className="inline-flex items-center gap-2 bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] text-xs font-semibold px-4 py-1.5 rounded-full mb-3">
+              <span className="text-base leading-none text-[#0083d1]">✱</span>
               <span>Get In Touch</span>
             </div>
 
@@ -242,7 +242,7 @@ export default function Contactform() {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    className="w-full bg-[#fbf5f1] border border-[#f0ded2] rounded-2xl px-4 py-3 text-xs sm:text-sm text-[#0b1324] placeholder:text-gray-400 focus:outline-none focus:border-[#ff4d00] focus:bg-white transition-colors"
+                    className="w-full bg-[#f2f8fc] border border-[#d3e7f6] rounded-2xl px-4 py-3 text-xs sm:text-sm text-[#0b1324] placeholder:text-gray-400 focus:outline-none focus:border-[#0083d1] focus:bg-white transition-colors"
                   />
                 </div>
 
@@ -259,7 +259,7 @@ export default function Contactform() {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full bg-[#fbf5f1] border border-[#f0ded2] rounded-2xl px-4 py-3 text-xs sm:text-sm text-[#0b1324] placeholder:text-gray-400 focus:outline-none focus:border-[#ff4d00] focus:bg-white transition-colors"
+                    className="w-full bg-[#f2f8fc] border border-[#d3e7f6] rounded-2xl px-4 py-3 text-xs sm:text-sm text-[#0b1324] placeholder:text-gray-400 focus:outline-none focus:border-[#0083d1] focus:bg-white transition-colors"
                   />
                 </div>
               </div>
@@ -278,7 +278,7 @@ export default function Contactform() {
                     onChange={(e) =>
                       setFormData({ ...formData, phone: e.target.value })
                     }
-                    className="w-full bg-[#fbf5f1] border border-[#f0ded2] rounded-2xl px-4 py-3 text-xs sm:text-sm text-[#0b1324] placeholder:text-gray-400 focus:outline-none focus:border-[#ff4d00] focus:bg-white transition-colors"
+                    className="w-full bg-[#f2f8fc] border border-[#d3e7f6] rounded-2xl px-4 py-3 text-xs sm:text-sm text-[#0b1324] placeholder:text-gray-400 focus:outline-none focus:border-[#0083d1] focus:bg-white transition-colors"
                   />
                 </div>
 
@@ -293,7 +293,7 @@ export default function Contactform() {
                       onChange={(e) =>
                         setFormData({ ...formData, service: e.target.value })
                       }
-                      className="w-full appearance-none bg-[#fbf5f1] border border-[#f0ded2] rounded-2xl px-4 py-3 text-xs sm:text-sm text-[#0b1324] focus:outline-none focus:border-[#ff4d00] focus:bg-white transition-colors pr-10 cursor-pointer"
+                      className="w-full appearance-none bg-[#f2f8fc] border border-[#d3e7f6] rounded-2xl px-4 py-3 text-xs sm:text-sm text-[#0b1324] focus:outline-none focus:border-[#0083d1] focus:bg-white transition-colors pr-10 cursor-pointer"
                     >
                       <option value="" disabled>
                         Service You&apos;re Interested
@@ -339,7 +339,7 @@ export default function Contactform() {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  className="w-full bg-[#fbf5f1] border border-[#f0ded2] rounded-2xl px-4 py-3 text-xs sm:text-sm text-[#0b1324] placeholder:text-gray-400 focus:outline-none focus:border-[#ff4d00] focus:bg-white transition-colors resize-none"
+                  className="w-full bg-[#f2f8fc] border border-[#d3e7f6] rounded-2xl px-4 py-3 text-xs sm:text-sm text-[#0b1324] placeholder:text-gray-400 focus:outline-none focus:border-[#0083d1] focus:bg-white transition-colors resize-none"
                 />
               </div>
 
@@ -347,7 +347,7 @@ export default function Contactform() {
               <div>
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-2 bg-[#ff4d00] hover:bg-[#e04300] text-white text-xs sm:text-sm font-semibold px-8 py-3.5 rounded-full transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
+                  className="inline-flex items-center gap-2 bg-[#0083d1] hover:bg-[#006eb0] text-white text-xs sm:text-sm font-semibold px-8 py-3.5 rounded-full transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
                 >
                   <span>Send Message</span>
                   <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-xs">

@@ -16,7 +16,7 @@ export default function LeadershipTeam() {
       role: "Founder & Chief Architect",
       bio: "Former enterprise systems lead with 14+ years designing high-throughput distributed applications and advising Fortune 500 tech transitions.",
       specialty: "Cloud Architecture • Distributed Systems",
-      imageBg: "from-amber-600 to-orange-500",
+      imageBg: "from-blue-600 to-sky-500",
       initials: "AM",
     },
     {
@@ -51,16 +51,16 @@ export default function LeadershipTeam() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>
-            <div className="inline-flex items-center gap-2 bg-[#fff1ec] border border-[#ff4d00]/20 text-[#ff4d00] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+            <div className="inline-flex items-center gap-2 bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
               <span className="tracking-widest uppercase text-[11px] font-bold">
                 HUMAN LEADERSHIP
               </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#0b1324]">
-              Leadership &amp; <span className="text-[#ff4d00]">Makers</span>
+              Leadership &amp; <span className="text-[#0083d1]">Makers</span>
             </h2>
           </div>
 
@@ -75,7 +75,7 @@ export default function LeadershipTeam() {
           {leaders.map((leader) => (
             <div
               key={leader.name}
-              className="bg-white border border-gray-100 rounded-3xl p-6 sm:p-7 shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-xl hover:border-[#ff4d00]/40 transition-all flex flex-col justify-between group"
+              className="bg-white border border-gray-100 rounded-3xl p-6 sm:p-7 shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-xl hover:border-[#0083d1]/40 transition-all flex flex-col justify-between group"
             >
               <div>
                 {/* Avatar with dynamic gradient */}
@@ -85,10 +85,10 @@ export default function LeadershipTeam() {
                   {leader.initials}
                 </div>
 
-                <h3 className="text-lg font-bold text-[#0b1324] group-hover:text-[#ff4d00] transition-colors">
+                <h3 className="text-lg font-bold text-[#0b1324] group-hover:text-[#0083d1] transition-colors">
                   {leader.name}
                 </h3>
-                <p className="text-xs font-semibold text-[#ff4d00] mt-0.5 mb-3">
+                <p className="text-xs font-semibold text-[#0083d1] mt-0.5 mb-3">
                   {leader.role}
                 </p>
 
@@ -122,7 +122,7 @@ export default function LeadershipTeam() {
 
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#ff4d00] hover:bg-[#e04300] text-white text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-full transition-colors shrink-0"
+            className="inline-flex items-center gap-2 bg-[#0083d1] hover:bg-[#006eb0] text-white text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-full transition-colors shrink-0"
           >
             <span>View Open Roles</span>
             <span>→</span>

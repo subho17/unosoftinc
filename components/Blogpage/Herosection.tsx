@@ -51,17 +51,17 @@ export default function Herosection() {
         {/* Header Eyebrow & Category Label */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6 sm:mb-8">
           <div>
-            <div className="inline-flex items-center gap-2 bg-[#fff1ec] border border-[#ff4d00]/20 text-[#ff4d00] text-xs font-semibold px-4 py-1.5 rounded-full mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+            <div className="inline-flex items-center gap-2 bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] text-xs font-semibold px-4 py-1.5 rounded-full mb-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
               <span className="tracking-widest uppercase text-[11px] font-bold">
                 THE UNOSOFT JOURNAL
               </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#0b1324]">
               Stories, thinking &amp;{" "}
-              <span className="text-[#ff4d00]">insights</span>
+              <span className="text-[#0083d1]">insights</span>
             </h1>
           </div>
 
@@ -105,7 +105,7 @@ export default function Herosection() {
           {/* Top Bar: Pill Meta & Slide Counter */}
           <div className="relative z-10 p-6 sm:p-8 md:p-10 flex items-center justify-between">
             <span className="inline-flex items-center gap-2 bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-semibold px-4 py-1.5 rounded-full">
-              <span className="w-2 h-2 rounded-full bg-[#ff4d00] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#0083d1] animate-pulse" />
               <span>Featured • {currentSlide.tag}</span>
             </span>
 
@@ -124,7 +124,7 @@ export default function Herosection() {
             {/* Title, Excerpt & Author */}
             <div className="max-w-3xl space-y-3 sm:space-y-4">
               <Link href={currentSlide.href} className="group/link block">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-[1.2] drop-shadow-md group-hover/link:text-[#ff4d00] transition-colors">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-[1.2] drop-shadow-md group-hover/link:text-[#0083d1] transition-colors">
                   {currentSlide.title}
                 </h2>
               </Link>
@@ -141,7 +141,7 @@ export default function Herosection() {
                 <span className="text-gray-500">•</span>
                 <Link
                   href={currentSlide.href}
-                  className="inline-flex items-center gap-1 text-[#ff4d00] hover:text-[#ff7033] font-semibold transition-colors"
+                  className="inline-flex items-center gap-1 text-[#0083d1] hover:text-[#2997dc] font-semibold transition-colors"
                 >
                   <span>Read full story</span>
                   <span className="text-sm">→</span>
@@ -175,7 +175,7 @@ export default function Herosection() {
                   type="button"
                   onClick={handleNext}
                   aria-label="Next blog post"
-                  className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#ff4d00] hover:bg-[#e04300] active:scale-95 text-white flex items-center justify-center transition-all cursor-pointer shadow-lg hover:shadow-[#ff4d00]/30"
+                  className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#0083d1] hover:bg-[#006eb0] active:scale-95 text-white flex items-center justify-center transition-all cursor-pointer shadow-lg hover:shadow-[#0083d1]/30"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -200,7 +200,7 @@ export default function Herosection() {
                     aria-label={`Go to slide ${index + 1}`}
                     className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                       index === currentIndex
-                        ? "w-6 bg-[#ff4d00]"
+                        ? "w-6 bg-[#0083d1]"
                         : "w-2 bg-white/35 hover:bg-white/60"
                     }`}
                   />

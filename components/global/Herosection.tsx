@@ -1,11 +1,34 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+const heroImages = [
+  {
+    src: "/about-hero.jpg",
+    alt: "UnoSoft Technical Consulting Team Collaboration",
+  },
+  {
+    src: "/services-hero.jpg",
+    alt: "Enterprise Digital Engineering & Modern Tech Stacks",
+  },
+  {
+    src: "/about-intro-main.jpg",
+    alt: "Digital Product Architecture and UI/UX Design Systems",
+  },
+  {
+    src: "/blog-4.jpg",
+    alt: "High-Performance Cloud & Software Development Workspace",
+  },
+];
+
 export default function Herosection() {
+  const [activeImage, setActiveImage] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
+  // Parallax mouse movement
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       const { innerWidth, innerHeight } = window;
@@ -18,12 +41,26 @@ export default function Herosection() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  // Automatic slideshow rotation across the 4 images
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(() => {
+      setActiveImage((prev) => (prev + 1) % heroImages.length);
+    }, 5500);
+
+    return () => clearInterval(timer);
+  }, [isPaused]);
+
   const scrollToNext = () => {
     window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
   };
 
   return (
-    <section className="sticky top-0 z-0 w-full min-h-screen bg-white overflow-hidden flex items-end">
+    <section
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      className="sticky top-0 z-0 w-full min-h-screen bg-[#0a0a0a] overflow-hidden flex items-end text-white"
+    >
       <style>{`
         @keyframes hero-text-reveal {
           0% {
@@ -33,16 +70,6 @@ export default function Herosection() {
           100% {
             opacity: 1;
             transform: translateY(0);
-          }
-        }
-        @keyframes float-particle {
-          0%, 100% {
-            transform: translateY(0) translateX(0);
-            opacity: 0.35;
-          }
-          50% {
-            transform: translateY(-24px) translateX(12px);
-            opacity: 0.8;
           }
         }
         .hero-reveal-1 {
@@ -58,101 +85,87 @@ export default function Herosection() {
         }
       `}</style>
 
-      {/* Decorative Parallax Background Waves & Subtle Ambient Particles */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Glowing Orbs with Parallax */}
+      {/* 3-4 Background Images Layer with Smooth Crossfade */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        {heroImages.map((img, index) => (
+          <div
+            key={img.src}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === activeImage ? "opacity-100 scale-100" : "opacity-0 scale-105"
+            }`}
+            style={{
+              transitionProperty: "opacity, transform",
+              transitionDuration: "1200ms",
+            }}
+          >
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              priority={index === 0}
+              sizes="100vw"
+              className="object-cover object-center brightness-100"
+            />
+          </div>
+        ))}
+
+        {/* Black Cover Over the Images: Reduced Opacity for Clear Background Visibility */}
+        <div className="absolute inset-0 bg-black/40 z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/85 via-black/25 to-black/35 z-[2]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent z-[2]" />
+
+        {/* Ambient Subtle Brand Glow Orbs */}
         <div
-          className="absolute -top-32 -right-32 w-[540px] h-[540px] rounded-full bg-[#ff4d00]/10 blur-3xl transition-transform duration-700 ease-out"
+          className="absolute -top-32 -right-32 w-[540px] h-[540px] rounded-full bg-[#0083d1]/10 blur-3xl transition-transform duration-700 ease-out z-[3]"
           style={{
             transform: `translate3d(${mousePos.x * 1.5}px, ${mousePos.y * 1.5}px, 0)`,
           }}
         />
         <div
-          className="absolute top-1/3 -left-20 w-[420px] h-[420px] rounded-full bg-[#ff8c5a]/8 blur-3xl transition-transform duration-700 ease-out"
+          className="absolute top-1/3 -left-20 w-[420px] h-[420px] rounded-full bg-[#0083d1]/10 blur-3xl transition-transform duration-700 ease-out z-[3]"
           style={{
             transform: `translate3d(${-mousePos.x}px, ${-mousePos.y}px, 0)`,
           }}
         />
-
-        {/* Floating Subtle Particles */}
-        {[
-          { top: "18%", left: "15%", size: 6, delay: "0s", duration: "7s" },
-          { top: "32%", left: "75%", size: 8, delay: "1.2s", duration: "9s" },
-          { top: "65%", left: "85%", size: 5, delay: "2.4s", duration: "8s" },
-          { top: "25%", left: "45%", size: 7, delay: "0.8s", duration: "10s" },
-          { top: "72%", left: "28%", size: 6, delay: "3s", duration: "7.5s" },
-          { top: "45%", left: "62%", size: 9, delay: "1.6s", duration: "8.5s" },
-        ].map((pt, i) => (
-          <span
-            key={i}
-            className="absolute rounded-full bg-[#ff4d00]"
-            style={{
-              top: pt.top,
-              left: pt.left,
-              width: `${pt.size}px`,
-              height: `${pt.size}px`,
-              animation: `float-particle ${pt.duration} ease-in-out infinite ${pt.delay}`,
-            }}
-          />
-        ))}
-
-        {/* Parallax SVG Background Waves */}
-        <svg
-          className="absolute top-0 right-0 w-[75%] h-full transition-transform duration-700 ease-out"
-          viewBox="0 0 800 600"
-          fill="none"
-          preserveAspectRatio="xMaxYMin slice"
-          style={{
-            transform: `translate3d(${mousePos.x * 0.6}px, ${mousePos.y * 0.6}px, 0)`,
-          }}
-        >
-          <path
-            d="M400 0C300 100 350 250 500 300C650 350 700 200 800 150V0H400Z"
-            fill="#f3f4f6"
-            opacity="0.9"
-          />
-          <path
-            d="M500 0C400 80 420 200 550 260C680 320 750 180 800 100V0H500Z"
-            fill="#fff3ed"
-            opacity="0.85"
-          />
-          <path
-            d="M550 0C480 60 500 150 600 200C700 250 770 150 800 80V0H550Z"
-            fill="#ff4d00"
-            opacity="0.08"
-          />
-        </svg>
       </div>
 
-      {/* Content with Text Reveal Animations */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pb-16">
-        <div className="w-full">
+      {/* Hero Foreground Content - Aligned further towards the left */}
+      <div className="relative z-10 w-full max-w-[1720px] mx-auto px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20 pb-16 pt-32">
+        <div className="w-full max-w-4xl lg:max-w-5xl">
+          {/* Eyebrow Badge */}
+          <div className="hero-reveal-1 inline-flex items-center bg-white/10 backdrop-blur-md border border-white/15 px-4 py-1.5 rounded-full text-xs font-semibold text-white mb-6 shadow-md">
+            <span className="tracking-widest uppercase text-[11px] font-bold text-gray-200">
+              STRATEGIC TECHNOLOGY ADVISORY
+            </span>
+          </div>
+
           {/* Heading strictly in 2 lines with staggered text reveal */}
-          <h1 className="text-[clamp(1.2rem,4.2vw,3.75rem)] font-bold leading-tight text-[#0b1324] tracking-tight">
-            <span className="block whitespace-nowrap overflow-hidden">
+          <h1 className="text-[clamp(1.75rem,4.5vw,4.25rem)] font-extrabold leading-[1.12] text-white tracking-tight drop-shadow-md">
+            <span className="block">
               <span className="block hero-reveal-1">
                 Technical consulting that
               </span>
             </span>
-            <span className="block whitespace-nowrap overflow-hidden">
+            <span className="block">
               <span className="block hero-reveal-2">
                 drives{" "}
-                <span className="text-[#ff4d00]">business transformation.</span>
+                <span className="text-[#0083d1]">business transformation.</span>
               </span>
             </span>
           </h1>
 
           {/* Subtext */}
-          <p className="mt-6 text-sm md:text-base text-gray-600 leading-relaxed max-w-lg hero-reveal-3">
+          <p className="mt-5 text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl hero-reveal-3 drop-shadow-sm">
             We are strategic business technology advisors committed to driving
-            meaningful business transformation.
+            meaningful digital business transformation through UI/UX design,
+            cloud architecture, and full-stack software engineering.
           </p>
 
-          {/* CTA Button */}
-          <div className="mt-8 hero-reveal-3">
+          {/* Action Buttons */}
+          <div className="mt-8 flex flex-wrap items-center gap-4 hero-reveal-3">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-[#ff4d00] hover:bg-[#e04300] text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors shadow-md hover:shadow-lg hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-[#0083d1] hover:bg-[#006eb0] text-white text-xs sm:text-sm font-semibold px-7 py-3.5 rounded-full transition-all shadow-lg hover:shadow-[#0083d1]/30 hover:-translate-y-0.5"
             >
               <span>Schedule a Free Consultation</span>
               <svg
@@ -161,7 +174,7 @@ export default function Herosection() {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                strokeWidth={2}
+                strokeWidth={2.2}
               >
                 <path
                   strokeLinecap="round"
@@ -170,16 +183,23 @@ export default function Herosection() {
                 />
               </svg>
             </Link>
+
+            <Link
+              href="/portfolio"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs sm:text-sm font-semibold px-6 py-3.5 rounded-full backdrop-blur-md transition-colors"
+            >
+              <span>View Case Studies</span>
+              <span className="text-xs">↗</span>
+            </Link>
           </div>
         </div>
 
-        {/* Bottom row: Explore + Downward Arrow + Dots */}
-        <div className="mt-16 flex items-center justify-between">
+        {/* Bottom row: Explore + Downward Arrow + Interactive Slide Dots */}
+        <div className="mt-14 sm:mt-18 flex items-center justify-between pt-6 border-t border-white/15">
           {/* Explore indicator */}
           <div className="flex items-center gap-2">
-            <span className="block w-2 h-2 rounded-full bg-[#ff4d00] animate-bounce" />
-            <span className="text-xs text-[#ff4d00] font-medium tracking-wide">
-              Explore
+            <span className="text-xs text-gray-300 font-medium tracking-wide">
+              Explore UnoSoft
             </span>
           </div>
 
@@ -189,7 +209,7 @@ export default function Herosection() {
             onClick={scrollToNext}
             aria-label="Scroll down"
             title="Scroll down"
-            className="w-10 h-10 rounded-full border border-[#ff4d00]/30 bg-[#ff4d00]/10 hover:bg-[#ff4d00] text-[#ff4d00] hover:text-white flex items-center justify-center transition-all animate-bounce cursor-pointer shadow-sm"
+            className="w-11 h-11 rounded-full border border-white/20 bg-white/10 backdrop-blur-md hover:bg-[#0083d1] hover:border-[#0083d1] text-white flex items-center justify-center transition-all animate-bounce cursor-pointer shadow-md"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -207,14 +227,24 @@ export default function Herosection() {
             </svg>
           </button>
 
-          {/* Pagination dots */}
+          {/* Interactive Pagination Dots (4 Images) */}
           <div className="flex items-center gap-2">
-            <span className="block w-2 h-2 rounded-full bg-[#ff4d00]" />
-            <span className="block w-2 h-2 rounded-full bg-gray-300" />
+            {heroImages.map((_, idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => setActiveImage(idx)}
+                aria-label={`Switch to hero background ${idx + 1}`}
+                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                  idx === activeImage
+                    ? "w-6 bg-[#0083d1]"
+                    : "w-2 bg-white/35 hover:bg-white/60"
+                }`}
+              />
+            ))}
           </div>
         </div>
       </div>
     </section>
   );
 }
-

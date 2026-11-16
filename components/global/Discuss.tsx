@@ -36,13 +36,13 @@ export default function Discuss() {
           Have An Awesome Project
           <br />
           Idea?{" "}
-          <span className="relative inline-block text-[#ff4d00]">
+          <span className="relative inline-block text-[#0083d1]">
             Let&apos;s Discuss
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 240 14"
               fill="none"
-              className="absolute -bottom-2 left-0 w-full h-3 text-[#ff4d00]"
+              className="absolute -bottom-2 left-0 w-full h-3 text-[#0083d1]"
               aria-hidden="true"
             >
               <path
@@ -60,7 +60,7 @@ export default function Discuss() {
           onSubmit={handleSubmit}
           className="mt-10 max-w-2xl mx-auto bg-white border border-gray-200 rounded-full p-1.5 sm:p-2 shadow-[0_8px_30px_rgba(0,0,0,0.06)] flex items-center gap-2 sm:gap-3"
         >
-          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#ff4d00]/15 text-[#ff4d00] flex items-center justify-center shrink-0">
+          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#0083d1]/15 text-[#0083d1] flex items-center justify-center shrink-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-5 h-5"
@@ -85,7 +85,7 @@ export default function Discuss() {
 
           <button
             type="submit"
-            className="inline-flex items-center gap-2 bg-[#ff4d00] hover:bg-[#e04300] text-white text-sm font-semibold px-5 sm:px-6 py-2.5 sm:py-3 rounded-full transition-colors shrink-0 cursor-pointer"
+            className="inline-flex items-center gap-2 bg-[#0083d1] hover:bg-[#006eb0] text-white text-sm font-semibold px-5 sm:px-6 py-2.5 sm:py-3 rounded-full transition-colors shrink-0 cursor-pointer"
           >
             <span>Send</span>
             <svg
@@ -106,7 +106,7 @@ export default function Discuss() {
         </form>
 
         {submitted && (
-          <p className="mt-3 text-xs sm:text-sm font-medium text-[#ff4d00]">
+          <p className="mt-3 text-xs sm:text-sm font-medium text-[#0083d1]">
             Thanks! Your project idea has been received — we&apos;ll reply in
             1–3 hours.
           </p>
@@ -119,7 +119,7 @@ export default function Discuss() {
               {idx > 0 && (
                 <span className="hidden sm:inline text-gray-300 mr-3">|</span>
               )}
-              <span className="w-5 h-5 rounded-full bg-[#ff4d00]/15 text-[#ff4d00] flex items-center justify-center shrink-0">
+              <span className="w-5 h-5 rounded-full bg-[#0083d1]/15 text-[#0083d1] flex items-center justify-center shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-3 h-3"
@@ -146,7 +146,7 @@ export default function Discuss() {
         {/* Orange back ribbon */}
         <div
           aria-hidden="true"
-          className="absolute inset-x-4 sm:inset-x-6 h-14 sm:h-16 bg-gradient-to-r from-[#ff6a00] to-[#ff4d00] rounded-2xl rotate-[2deg] shadow-md"
+          className="absolute inset-x-4 sm:inset-x-6 h-14 sm:h-16 bg-gradient-to-r from-[#0083d1] to-[#0083d1] rounded-2xl rotate-[2deg] shadow-md"
         />
 
         {/* White front ribbon */}
@@ -155,7 +155,7 @@ export default function Discuss() {
             {ribbonTopics.map((topic, idx) => (
               <div key={topic} className="flex items-center gap-4 sm:gap-7">
                 {idx > 0 && (
-                  <span className="text-[#ff4d00] text-xl sm:text-2xl font-medium leading-none">
+                  <span className="text-[#0083d1] text-xl sm:text-2xl font-medium leading-none">
                     +
                   </span>
                 )}

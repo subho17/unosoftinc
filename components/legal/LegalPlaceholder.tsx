@@ -23,14 +23,14 @@ export default function LegalPlaceholder({
           aria-label="Breadcrumb"
           className="flex items-center gap-2 text-xs sm:text-sm text-[#475569] mb-6"
         >
-          <Link href="/" className="hover:text-[#ff4d00] transition-colors">
+          <Link href="/" className="hover:text-[#0083d1] transition-colors">
             Home
           </Link>
           <span className="text-gray-300">/</span>
           <span className="text-[#0b1324] font-medium">{eyebrow}</span>
         </nav>
 
-        <span className="inline-block bg-[#fff1ec] border border-[#ff4d00]/20 text-[#ff4d00] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
+        <span className="inline-block bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
           {eyebrow}
         </span>
 
@@ -54,7 +54,7 @@ export default function LegalPlaceholder({
           For any question about this document in the meantime, please{" "}
           <Link
             href="/contact"
-            className="font-semibold text-[#ff4d00] hover:text-[#e04300] transition-colors"
+            className="font-semibold text-[#0083d1] hover:text-[#006eb0] transition-colors"
           >
             contact us
           </Link>{" "}
@@ -64,7 +64,7 @@ export default function LegalPlaceholder({
         <div className="mt-10">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#ff4d00] hover:text-[#e04300] transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[#0083d1] hover:text-[#006eb0] transition-colors"
           >
             <span aria-hidden="true">←</span>
             <span>Back to home</span>

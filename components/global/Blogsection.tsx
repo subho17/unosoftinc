@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 
-interface BlogPost {
+export interface BlogCard {
   id: string;
   tag: string;
   title: string;
@@ -15,62 +15,6 @@ interface BlogPost {
   imageSrc?: string;
   imageAlt?: string;
 }
-
-const posts: BlogPost[] = [
-  {
-    id: "post-1",
-    tag: "UI/UX Design",
-    title: "Design Unraveled: Defining the Essence of UI/UX Magic",
-    date: "June 15, 2023",
-    views: "21k Views",
-    href: "/blog/design-unraveled",
-    buttonBg: "bg-[#1f1f1f] group-hover:bg-[#ff4d00]",
-  },
-  {
-    id: "post-2",
-    tag: "User Experience",
-    title: "Beyond Aesthetics: Crafting Intuitive UX",
-    date: "June 10, 2023",
-    views: "18k Views",
-    href: "/blog/beyond-aesthetics",
-    buttonBg: "bg-[#ff4d00] group-hover:bg-[#e04300]",
-    imageSrc: "/blog-2.jpg",
-    imageAlt: "Sketching mobile wireframes on tablet with stylus",
-  },
-  {
-    id: "post-3",
-    tag: "Design Systems",
-    title: "Pixels & Insights: Unveiling the Art of UI/UX",
-    date: "June 5, 2023",
-    views: "17k Views",
-    href: "/blog/pixels-and-insights",
-    buttonBg: "bg-[#1f1f1f] group-hover:bg-[#ff4d00]",
-    imageSrc: "/blog-3.jpg",
-    imageAlt: "Laptop and smartphone displaying analytics dashboards",
-  },
-  {
-    id: "post-4",
-    tag: "Web Development",
-    title: "Next-Gen Web: Accelerating Performance with Modern Stacks",
-    date: "May 28, 2023",
-    views: "19k Views",
-    href: "/blog/next-gen-web",
-    buttonBg: "bg-[#ff4d00] group-hover:bg-[#e04300]",
-    imageSrc: "/blog-4.jpg",
-    imageAlt: "Modern developer workstation with multiple code screens and warm ambient lighting",
-  },
-  {
-    id: "post-5",
-    tag: "Brand Identity",
-    title: "Brand Mastery: Building Visual Identities that Endure",
-    date: "May 20, 2023",
-    views: "24k Views",
-    href: "/blog/brand-mastery",
-    buttonBg: "bg-[#1f1f1f] group-hover:bg-[#ff4d00]",
-    imageSrc: "/blog-5.jpg",
-    imageAlt: "Brand design materials, color swatches and typography specimen book",
-  },
-];
 
 function DeskDesignIllustration() {
   return (
@@ -115,7 +59,7 @@ function DeskDesignIllustration() {
   );
 }
 
-export default function Blogsection() {
+export default function Blogsection({ posts }: { posts: BlogCard[] }) {
   const [isPaused, setIsPaused] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -161,16 +105,16 @@ export default function Blogsection() {
         {/* Header Row */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
           <div>
-            <div className="inline-flex items-center gap-2 bg-[#fff1ec] border border-[#ff4d00]/20 text-[#ff4d00] text-xs font-semibold px-3.5 py-1.5 rounded-full mb-3">
-              <span className="w-2 h-2 rounded-full bg-[#ff4d00] animate-pulse" />
+            <div className="inline-flex items-center gap-2 bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] text-xs font-semibold px-3.5 py-1.5 rounded-full mb-3">
+              <span className="w-2 h-2 rounded-full bg-[#0083d1] animate-pulse" />
               <span>Articles &amp; Thought Leadership</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#0b1324] leading-[1.15] tracking-tight">
               From our
               <br />
-              <span className="text-[#ff4d00]">blog posts</span>
+              <span className="text-[#0083d1]">blog posts</span>
             </h2>
-            <div className="w-24 h-1 bg-[#ff4d00] rounded-full mt-3" />
+            <div className="w-24 h-1 bg-[#0083d1] rounded-full mt-3" />
           </div>
 
           {/* Controls: Auto-move status + Arrows + View All */}
@@ -196,7 +140,7 @@ export default function Blogsection() {
                 type="button"
                 onClick={scrollLeft}
                 aria-label="Scroll blogs left"
-                className="w-10 h-10 rounded-full border border-gray-300 hover:border-[#ff4d00] bg-white hover:bg-[#ff4d00] text-gray-700 hover:text-white flex items-center justify-center transition-all shadow-xs cursor-pointer"
+                className="w-10 h-10 rounded-full border border-gray-300 hover:border-[#0083d1] bg-white hover:bg-[#0083d1] text-gray-700 hover:text-white flex items-center justify-center transition-all shadow-xs cursor-pointer"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -213,7 +157,7 @@ export default function Blogsection() {
                 type="button"
                 onClick={scrollRight}
                 aria-label="Scroll blogs right"
-                className="w-10 h-10 rounded-full border border-gray-300 hover:border-[#ff4d00] bg-white hover:bg-[#ff4d00] text-gray-700 hover:text-white flex items-center justify-center transition-all shadow-xs cursor-pointer"
+                className="w-10 h-10 rounded-full border border-gray-300 hover:border-[#0083d1] bg-white hover:bg-[#0083d1] text-gray-700 hover:text-white flex items-center justify-center transition-all shadow-xs cursor-pointer"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -231,7 +175,7 @@ export default function Blogsection() {
             {/* View All Button */}
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 bg-[#ff4d00] hover:bg-[#e04300] text-white text-sm sm:text-base font-semibold px-7 py-2.5 rounded-full transition-colors"
+              className="inline-flex items-center gap-2 bg-[#0083d1] hover:bg-[#006eb0] text-white text-sm sm:text-base font-semibold px-7 py-2.5 rounded-full transition-colors"
             >
               <span>View All</span>
               <svg
@@ -326,7 +270,7 @@ export default function Blogsection() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-3.5 text-xl sm:text-2xl font-bold text-[#0b1324] leading-snug tracking-tight group-hover:text-[#ff4d00] transition-colors line-clamp-2">
+                  <h3 className="mt-3.5 text-xl sm:text-2xl font-bold text-[#0b1324] leading-snug tracking-tight group-hover:text-[#0083d1] transition-colors line-clamp-2">
                     {post.title}
                   </h3>
 
@@ -335,7 +279,7 @@ export default function Blogsection() {
                     <span className="inline-flex items-center gap-1.5">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="w-4 h-4 text-[#ff4d00]"
+                        className="w-4 h-4 text-[#0083d1]"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -355,7 +299,7 @@ export default function Blogsection() {
                     <span className="inline-flex items-center gap-1.5">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="w-4 h-4 text-[#ff4d00]"
+                        className="w-4 h-4 text-[#0083d1]"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"

@@ -73,12 +73,12 @@ export default function Footersection() {
         {/* Top CTA Banner */}
         <div className="bg-[#1e1e1e] border border-white/10 rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           <div className="max-w-2xl">
-            <span className="text-[11px] font-semibold tracking-[0.16em] uppercase text-[#ff4d00]">
+            <span className="text-[11px] font-semibold tracking-[0.16em] uppercase text-[#0083d1]">
               START A PROJECT
             </span>
             <h2 className="mt-2 text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
               Ready to build your{" "}
-              <span className="text-[#ff4d00]">next digital product?</span>
+              <span className="text-[#0083d1]">next digital product?</span>
             </h2>
             <p className="mt-2.5 text-xs sm:text-sm text-gray-300 leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
@@ -90,7 +90,7 @@ export default function Footersection() {
           <div className="flex flex-wrap items-center gap-3 shrink-0">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-[#ff4d00] hover:bg-[#e04300] text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-full transition-colors"
+              className="inline-flex items-center gap-2 bg-[#0083d1] hover:bg-[#006eb0] text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-full transition-colors"
             >
               <span>Get a Free Proposal</span>
               <span>→</span>
@@ -127,21 +127,21 @@ export default function Footersection() {
 
             <ul className="space-y-1.5 text-xs text-gray-300">
               <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
                 <span>Product Strategy &amp; Consulting</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
                 <span>UI/UX &amp; Brand Systems</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
                 <span>Full-Stack Engineering</span>
               </li>
             </ul>
 
             <div className="bg-[#1e1e1e] border border-white/10 rounded-xl p-3 text-xs text-gray-300 leading-relaxed flex items-start gap-2">
-              <span className="text-[#ff4d00] mt-0.5 shrink-0">●</span>
+              <span className="text-[#0083d1] mt-0.5 shrink-0">●</span>
               <span>
                 123 Innovation Drive, Suite 400, San Francisco, CA 94105
               </span>
@@ -155,7 +155,7 @@ export default function Footersection() {
 
           {/* Column 2: Our Services */}
           <div>
-            <h3 className="text-xs font-bold tracking-wider uppercase text-[#ff4d00] mb-4">
+            <h3 className="text-xs font-bold tracking-wider uppercase text-[#0083d1] mb-4">
               OUR SERVICES
             </h3>
             <ul className="space-y-2.5">
@@ -165,7 +165,7 @@ export default function Footersection() {
                     href={item.href}
                     className="inline-flex items-start gap-2 text-xs text-gray-300 hover:text-white transition-colors leading-snug"
                   >
-                    <span className="text-[#ff4d00]">→</span>
+                    <span className="text-[#0083d1]">→</span>
                     <span>{item.label}</span>
                   </Link>
                 </li>
@@ -175,7 +175,7 @@ export default function Footersection() {
 
           {/* Column 3: Company */}
           <div>
-            <h3 className="text-xs font-bold tracking-wider uppercase text-[#ff4d00] mb-4">
+            <h3 className="text-xs font-bold tracking-wider uppercase text-[#0083d1] mb-4">
               COMPANY
             </h3>
             <ul className="space-y-2.5">
@@ -185,7 +185,7 @@ export default function Footersection() {
                     href={item.href}
                     className="inline-flex items-center gap-2 text-xs text-gray-300 hover:text-white transition-colors"
                   >
-                    <span className="text-[#ff4d00]">→</span>
+                    <span className="text-[#0083d1]">→</span>
                     <span>{item.label}</span>
                   </Link>
                 </li>
@@ -195,7 +195,7 @@ export default function Footersection() {
 
           {/* Column 4: Other Useful Links */}
           <div>
-            <h3 className="text-xs font-bold tracking-wider uppercase text-[#ff4d00] mb-4">
+            <h3 className="text-xs font-bold tracking-wider uppercase text-[#0083d1] mb-4">
               OTHER USEFUL LINKS
             </h3>
             <ul className="space-y-2.5">
@@ -205,7 +205,7 @@ export default function Footersection() {
                     href={item.href}
                     className="inline-flex items-start gap-2 text-xs text-gray-300 hover:text-white transition-colors leading-snug"
                   >
-                    <span className="text-[#ff4d00]">→</span>
+                    <span className="text-[#0083d1]">→</span>
                     <span>{item.label}</span>
                   </Link>
                 </li>
@@ -215,7 +215,7 @@ export default function Footersection() {
 
           {/* Column 5: Contact & Offices + Stay Updated */}
           <div className="space-y-4">
-            <h3 className="text-xs font-bold tracking-wider uppercase text-[#ff4d00]">
+            <h3 className="text-xs font-bold tracking-wider uppercase text-[#0083d1]">
               CONTACT &amp; OFFICES
             </h3>
 
@@ -244,7 +244,7 @@ export default function Footersection() {
                 </div>
                 <a
                   href="mailto:hello@studiodemo.com"
-                  className="hover:text-[#ff4d00] transition-colors"
+                  className="hover:text-[#0083d1] transition-colors"
                 >
                   hello@studiodemo.com
                 </a>
@@ -256,7 +256,7 @@ export default function Footersection() {
                 </div>
                 <a
                   href="tel:+15550123456"
-                  className="hover:text-[#ff4d00] transition-colors"
+                  className="hover:text-[#0083d1] transition-colors"
                 >
                   +1 (555) 012-3456
                 </a>
@@ -290,18 +290,18 @@ export default function Footersection() {
                   }}
                   placeholder="Enter your email"
                   aria-label="Enter your email"
-                  className="flex-1 min-w-0 bg-[#262626] border border-white/10 rounded-lg px-3 py-2 text-xs text-white placeholder:text-gray-400 focus:outline-none focus:border-[#ff4d00]"
+                  className="flex-1 min-w-0 bg-[#262626] border border-white/10 rounded-lg px-3 py-2 text-xs text-white placeholder:text-gray-400 focus:outline-none focus:border-[#0083d1]"
                 />
                 <button
                   type="submit"
-                  className="bg-[#ff4d00] hover:bg-[#e04300] text-white text-xs font-semibold px-4 py-2 rounded-lg transition-colors cursor-pointer shrink-0"
+                  className="bg-[#0083d1] hover:bg-[#006eb0] text-white text-xs font-semibold px-4 py-2 rounded-lg transition-colors cursor-pointer shrink-0"
                 >
                   Join
                 </button>
               </form>
 
               {subscribed && (
-                <p className="mt-2 text-[11px] text-[#ff4d00] font-medium">
+                <p className="mt-2 text-[11px] text-[#0083d1] font-medium">
                   Thanks for subscribing!
                 </p>
               )}
@@ -320,7 +320,7 @@ export default function Footersection() {
               <a
                 key={social.label}
                 href={social.href}
-                className="inline-flex items-center gap-1 bg-[#242424] hover:bg-[#ff4d00] text-gray-200 hover:text-white text-xs font-medium px-3.5 py-1.5 rounded-full transition-colors"
+                className="inline-flex items-center gap-1 bg-[#242424] hover:bg-[#0083d1] text-gray-200 hover:text-white text-xs font-medium px-3.5 py-1.5 rounded-full transition-colors"
               >
                 <span>{social.label}</span>
                 <span className="text-[10px]">↗</span>
@@ -329,7 +329,7 @@ export default function Footersection() {
             <button
               type="button"
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1 text-xs font-semibold text-[#ff4d00] hover:text-white ml-2 transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1 text-xs font-semibold text-[#0083d1] hover:text-white ml-2 transition-colors cursor-pointer"
             >
               <span>Back to top</span>
               <span>↑</span>
@@ -355,7 +355,7 @@ export default function Footersection() {
                 onClick={scrollToTop}
                 aria-label="Scroll to top"
                 title="Back to top"
-                className="w-10 h-10 rounded-full bg-[#ff4d00] hover:bg-[#e04300] text-white flex items-center justify-center shadow-lg transition-all hover:-translate-y-0.5 cursor-pointer"
+                className="w-10 h-10 rounded-full bg-[#0083d1] hover:bg-[#006eb0] text-white flex items-center justify-center shadow-lg transition-all hover:-translate-y-0.5 cursor-pointer"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

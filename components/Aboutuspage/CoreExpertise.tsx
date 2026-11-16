@@ -50,16 +50,16 @@ export default function CoreExpertise() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>
-            <div className="inline-flex items-center gap-2 bg-[#fff1ec] border border-[#ff4d00]/20 text-[#ff4d00] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+            <div className="inline-flex items-center gap-2 bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
               <span className="tracking-widest uppercase text-[11px] font-bold">
                 TECHNICAL CAPABILITIES
               </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#0b1324]">
-              Our Core <span className="text-[#ff4d00]">Expertise</span>
+              Our Core <span className="text-[#0083d1]">Expertise</span>
             </h2>
           </div>
 
@@ -74,17 +74,17 @@ export default function CoreExpertise() {
           {capabilities.map((cap) => (
             <div
               key={cap.number}
-              className="bg-white border border-gray-200/80 hover:border-[#ff4d00]/50 rounded-3xl p-7 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all group flex flex-col justify-between"
+              className="bg-white border border-gray-200/80 hover:border-[#0083d1]/50 rounded-3xl p-7 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all group flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-extrabold text-[#ff4d00] tracking-widest bg-[#fff1ec] px-3 py-1 rounded-full">
+                  <span className="text-xs font-extrabold text-[#0083d1] tracking-widest bg-[#e8f4fc] px-3 py-1 rounded-full">
                     {cap.number}
                   </span>
-                  <span className="w-2 h-2 rounded-full bg-gray-200 group-hover:bg-[#ff4d00] transition-colors" />
+                  <span className="w-2 h-2 rounded-full bg-gray-200 group-hover:bg-[#0083d1] transition-colors" />
                 </div>
 
-                <h3 className="text-lg sm:text-xl font-bold text-[#0b1324] group-hover:text-[#ff4d00] transition-colors mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-[#0b1324] group-hover:text-[#0083d1] transition-colors mb-3">
                   {cap.title}
                 </h3>
 

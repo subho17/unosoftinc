@@ -20,7 +20,7 @@ const services: ServiceItem[] = [
     cardBg: "bg-[#262626]",
     cardBorder: "border border-white/15",
     layerBg: "bg-white/10",
-    buttonBg: "bg-[#262626] group-hover:bg-[#ff4d00]",
+    buttonBg: "bg-[#262626] group-hover:bg-[#0083d1]",
     mockup: (
       <div className="relative w-full h-full bg-[#e6e8ec] flex items-center justify-center overflow-hidden p-4">
         {/* Top-left floating card */}
@@ -30,7 +30,7 @@ const services: ServiceItem[] = [
             <br />
             Dream Trip
           </div>
-          <div className="mt-1.5 bg-[#ff4d00] text-white text-[5px] font-medium px-1.5 py-0.5 rounded-full w-fit">
+          <div className="mt-1.5 bg-[#0083d1] text-white text-[5px] font-medium px-1.5 py-0.5 rounded-full w-fit">
             Explore Now
           </div>
         </div>
@@ -51,7 +51,7 @@ const services: ServiceItem[] = [
           {/* App header */}
           <div className="px-2.5 flex items-center justify-between">
             <div className="flex items-center gap-1">
-              <span className="w-3 h-3 rounded-full bg-[#ff4d00] text-white text-[6px] flex items-center justify-center">
+              <span className="w-3 h-3 rounded-full bg-[#0083d1] text-white text-[6px] flex items-center justify-center">
                 ✈
               </span>
               <span className="text-[8px] font-bold text-gray-900">Travel</span>
@@ -75,7 +75,7 @@ const services: ServiceItem[] = [
               </div>
             </div>
             <div>
-              <div className="h-12 rounded-md bg-gradient-to-br from-amber-400 to-orange-600" />
+              <div className="h-12 rounded-md bg-gradient-to-br from-sky-400 to-blue-600" />
               <div className="text-[5px] text-gray-700 mt-0.5 font-medium">
                 Crystal Cove
               </div>
@@ -89,7 +89,7 @@ const services: ServiceItem[] = [
           </div>
           {/* Bottom tab bar */}
           <div className="border-t border-gray-100 px-3 py-1 flex justify-between text-[5px] text-gray-400">
-            <span className="text-[#ff4d00] font-semibold">Home</span>
+            <span className="text-[#0083d1] font-semibold">Home</span>
             <span>Explore</span>
             <span>Saved</span>
             <span>Profile</span>
@@ -102,7 +102,7 @@ const services: ServiceItem[] = [
         {/* Bottom-right floating card */}
         <div className="absolute bottom-16 right-3 w-16 bg-white rounded-xl shadow-md p-1.5 -rotate-12 z-10 border border-gray-100">
           <div className="text-[5px] font-semibold text-gray-600">Summer</div>
-          <div className="mt-1 bg-[#ff4d00] text-white text-[5px] font-semibold px-1.5 py-0.5 rounded-full text-center">
+          <div className="mt-1 bg-[#0083d1] text-white text-[5px] font-semibold px-1.5 py-0.5 rounded-full text-center">
             Best Deals
           </div>
         </div>
@@ -112,10 +112,10 @@ const services: ServiceItem[] = [
   {
     title: "Web Design",
     href: "/contact",
-    cardBg: "bg-[#ff4d00]",
-    cardBorder: "border border-[#ff6a2b]/40",
+    cardBg: "bg-[#0083d1]",
+    cardBorder: "border border-[#0083d1]/40",
     layerBg: "bg-white/25",
-    buttonBg: "bg-[#ff4d00] group-hover:bg-[#e04300]",
+    buttonBg: "bg-[#0083d1] group-hover:bg-[#006eb0]",
     mockup: (
       <div className="relative w-full h-full bg-[#eceef2] overflow-hidden flex">
         {/* Main browser window */}
@@ -136,7 +136,7 @@ const services: ServiceItem[] = [
               <div className="text-[9px] font-bold text-gray-900 leading-tight">
                 Modern Business Solutions
               </div>
-              <div className="mt-1.5 bg-[#ff4d00] text-white text-[5px] font-medium px-2 py-0.5 rounded-full w-fit">
+              <div className="mt-1.5 bg-[#0083d1] text-white text-[5px] font-medium px-2 py-0.5 rounded-full w-fit">
                 Get Started →
               </div>
             </div>
@@ -198,7 +198,7 @@ const services: ServiceItem[] = [
     cardBg: "bg-[#262626]",
     cardBorder: "border border-white/15",
     layerBg: "bg-white/10",
-    buttonBg: "bg-[#262626] group-hover:bg-[#ff4d00]",
+    buttonBg: "bg-[#262626] group-hover:bg-[#0083d1]",
     mockup: (
       <div className="w-full h-full bg-white flex flex-col overflow-hidden">
         {/* Top bar */}
@@ -271,10 +271,10 @@ const services: ServiceItem[] = [
   {
     title: "Mobile App",
     href: "/contact",
-    cardBg: "bg-[#ff4d00]",
-    cardBorder: "border border-[#ff6a2b]/40",
+    cardBg: "bg-[#0083d1]",
+    cardBorder: "border border-[#0083d1]/40",
     layerBg: "bg-white/25",
-    buttonBg: "bg-[#ff4d00] group-hover:bg-[#e04300]",
+    buttonBg: "bg-[#0083d1] group-hover:bg-[#006eb0]",
     mockup: (
       <div className="relative w-full h-full bg-[#e8ecf2] flex items-center justify-center gap-3 overflow-hidden p-4">
         {/* Left phone screen */}
@@ -286,7 +286,7 @@ const services: ServiceItem[] = [
             </div>
             <div className="mt-2 text-[11px] font-bold">$24,850.00</div>
             <div className="text-[5px] text-emerald-400 mt-0.5">+12.4% this month</div>
-            <div className="mt-3 h-14 rounded-xl bg-gradient-to-r from-[#ff4d00] to-amber-500 p-2 flex flex-col justify-between">
+            <div className="mt-3 h-14 rounded-xl bg-gradient-to-r from-[#0083d1] to-amber-500 p-2 flex flex-col justify-between">
               <span className="text-[5px] uppercase tracking-wider opacity-80">
                 Virtual Card
               </span>
@@ -310,11 +310,11 @@ const services: ServiceItem[] = [
           <div>
             <div className="text-[7px] font-bold text-gray-900">Activity</div>
             <div className="mt-2 flex items-end gap-1.5 h-20 pt-2">
-              <div className="flex-1 bg-orange-200 rounded-t h-[45%]" />
-              <div className="flex-1 bg-orange-300 rounded-t h-[65%]" />
-              <div className="flex-1 bg-[#ff4d00] rounded-t h-[95%]" />
-              <div className="flex-1 bg-orange-200 rounded-t h-[55%]" />
-              <div className="flex-1 bg-orange-400 rounded-t h-[80%]" />
+              <div className="flex-1 bg-sky-200 rounded-t h-[45%]" />
+              <div className="flex-1 bg-sky-300 rounded-t h-[65%]" />
+              <div className="flex-1 bg-[#0083d1] rounded-t h-[95%]" />
+              <div className="flex-1 bg-sky-200 rounded-t h-[55%]" />
+              <div className="flex-1 bg-sky-400 rounded-t h-[80%]" />
             </div>
           </div>
           <div className="bg-gray-50 rounded-xl p-2 space-y-1">
@@ -331,7 +331,7 @@ const services: ServiceItem[] = [
     cardBg: "bg-[#262626]",
     cardBorder: "border border-white/15",
     layerBg: "bg-white/10",
-    buttonBg: "bg-[#262626] group-hover:bg-[#ff4d00]",
+    buttonBg: "bg-[#262626] group-hover:bg-[#0083d1]",
     mockup: (
       <div className="w-full h-full bg-[#f4f4f6] p-4 flex flex-col justify-between overflow-hidden">
         {/* Brand board header */}
@@ -345,7 +345,7 @@ const services: ServiceItem[] = [
               <div className="text-[5px] text-gray-400">Visual System v2.0</div>
             </div>
           </div>
-          <span className="text-[5px] bg-orange-50 text-[#ff4d00] font-semibold px-2 py-0.5 rounded-full">
+          <span className="text-[5px] bg-sky-50 text-[#0083d1] font-semibold px-2 py-0.5 rounded-full">
             Identity
           </span>
         </div>
@@ -364,7 +364,7 @@ const services: ServiceItem[] = [
               Palette
             </div>
             <div className="grid grid-cols-2 gap-1.5">
-              <div className="h-7 rounded-md bg-[#ff4d00]" />
+              <div className="h-7 rounded-md bg-[#0083d1]" />
               <div className="h-7 rounded-md bg-[#141414]" />
               <div className="h-7 rounded-md bg-[#f59e0b]" />
               <div className="h-7 rounded-md bg-[#e5e7eb]" />
@@ -377,7 +377,7 @@ const services: ServiceItem[] = [
           <span className="text-[6px] font-semibold text-gray-700">
             Logo • Packaging • Collateral
           </span>
-          <span className="text-[6px] text-[#ff4d00] font-bold">100% Vector</span>
+          <span className="text-[6px] text-[#0083d1] font-bold">100% Vector</span>
         </div>
       </div>
     ),
@@ -385,16 +385,16 @@ const services: ServiceItem[] = [
   {
     title: "E-Commerce",
     href: "/contact",
-    cardBg: "bg-[#ff4d00]",
-    cardBorder: "border border-[#ff6a2b]/40",
+    cardBg: "bg-[#0083d1]",
+    cardBorder: "border border-[#0083d1]/40",
     layerBg: "bg-white/25",
-    buttonBg: "bg-[#ff4d00] group-hover:bg-[#e04300]",
+    buttonBg: "bg-[#0083d1] group-hover:bg-[#006eb0]",
     mockup: (
       <div className="w-full h-full bg-white flex flex-col overflow-hidden">
         {/* Store navbar */}
         <div className="px-4 py-2.5 border-b border-gray-100 flex items-center justify-between">
           <span className="text-[8px] font-extrabold tracking-tight text-gray-900">
-            SHOP<span className="text-[#ff4d00]">.CO</span>
+            SHOP<span className="text-[#0083d1]">.CO</span>
           </span>
           <div className="flex items-center gap-2 text-[6px] text-gray-500">
             <span>New</span>
@@ -409,17 +409,17 @@ const services: ServiceItem[] = [
         {/* Store hero banner */}
         <div className="mx-3 mt-2.5 rounded-xl bg-gradient-to-r from-[#181818] to-[#2e2e2e] p-3 text-white flex items-center justify-between">
           <div>
-            <div className="text-[5px] text-[#ff4d00] uppercase font-bold">
+            <div className="text-[5px] text-[#0083d1] uppercase font-bold">
               Season Drop
             </div>
             <div className="text-[10px] font-bold leading-tight mt-0.5">
               Minimalist Essentials
             </div>
-            <div className="mt-1.5 bg-[#ff4d00] text-white text-[5px] px-2 py-0.5 rounded-full w-fit">
+            <div className="mt-1.5 bg-[#0083d1] text-white text-[5px] px-2 py-0.5 rounded-full w-fit">
               Shop Now →
             </div>
           </div>
-          <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-orange-400 to-amber-200 shrink-0" />
+          <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-sky-400 to-blue-200 shrink-0" />
         </div>
 
         {/* Product grid */}
@@ -428,21 +428,21 @@ const services: ServiceItem[] = [
             <div className="h-14 rounded bg-gradient-to-br from-stone-200 to-stone-400" />
             <div className="mt-1">
               <div className="text-[6px] font-bold text-gray-800">Sneaker</div>
-              <div className="text-[5px] text-[#ff4d00] font-semibold">$129</div>
+              <div className="text-[5px] text-[#0083d1] font-semibold">$129</div>
             </div>
           </div>
           <div className="bg-gray-50 rounded-lg p-1.5 flex flex-col justify-between">
             <div className="h-14 rounded bg-gradient-to-br from-slate-200 to-slate-400" />
             <div className="mt-1">
               <div className="text-[6px] font-bold text-gray-800">Jacket</div>
-              <div className="text-[5px] text-[#ff4d00] font-semibold">$189</div>
+              <div className="text-[5px] text-[#0083d1] font-semibold">$189</div>
             </div>
           </div>
           <div className="bg-gray-50 rounded-lg p-1.5 flex flex-col justify-between">
             <div className="h-14 rounded bg-gradient-to-br from-amber-100 to-amber-300" />
             <div className="mt-1">
               <div className="text-[6px] font-bold text-gray-800">Watch</div>
-              <div className="text-[5px] text-[#ff4d00] font-semibold">$240</div>
+              <div className="text-[5px] text-[#0083d1] font-semibold">$240</div>
             </div>
           </div>
         </div>
@@ -600,7 +600,7 @@ export default function Servicepage() {
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 pb-8 border-b border-white/15">
         <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">
           <span className="text-white">My </span>
-          <span className="text-[#ff4d00]">Services</span>
+          <span className="text-[#0083d1]">Services</span>
         </h2>
 
         <div className="flex items-center gap-5">

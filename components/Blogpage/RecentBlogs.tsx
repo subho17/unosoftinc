@@ -72,12 +72,12 @@ export default function RecentBlogs({ posts }: RecentBlogsProps) {
                 </div>
 
                 {/* Tag */}
-                <span className="text-[11px] font-semibold uppercase tracking-wider text-[#ff4d00]">
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-[#0083d1]">
                   {post.tag}
                 </span>
 
                 {/* Title */}
-                <h3 className="mt-1.5 text-lg sm:text-xl font-bold text-[#0b1324] tracking-tight group-hover:text-[#ff4d00] transition-colors leading-snug mb-2.5">
+                <h3 className="mt-1.5 text-lg sm:text-xl font-bold text-[#0b1324] tracking-tight group-hover:text-[#0083d1] transition-colors leading-snug mb-2.5">
                   {post.title}
                 </h3>
 
@@ -112,7 +112,7 @@ export default function RecentBlogs({ posts }: RecentBlogsProps) {
             type="button"
             onClick={handleLoadMore}
             disabled={isLoadingMore}
-            className="inline-flex items-center gap-2 bg-[#0b1324] hover:bg-[#ff4d00] active:scale-95 text-white text-xs sm:text-sm font-semibold px-7 py-3 rounded-xl transition-all shadow-md hover:shadow-lg cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+            className="inline-flex items-center gap-2 bg-[#0b1324] hover:bg-[#0083d1] active:scale-95 text-white text-xs sm:text-sm font-semibold px-7 py-3 rounded-xl transition-all shadow-md hover:shadow-lg cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
           >
             {isLoadingMore ? (
               <>

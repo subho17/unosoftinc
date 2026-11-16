@@ -14,7 +14,7 @@ function MetaRow({ post }: { post: BlogPost }) {
       <span className="inline-flex items-center gap-1.5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-4 h-4 text-[#ff4d00]"
+          className="w-4 h-4 text-[#0083d1]"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -34,7 +34,7 @@ function MetaRow({ post }: { post: BlogPost }) {
       <span className="inline-flex items-center gap-1.5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-4 h-4 text-[#ff4d00]"
+          className="w-4 h-4 text-[#0083d1]"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -54,7 +54,7 @@ function MetaRow({ post }: { post: BlogPost }) {
       <span className="inline-flex items-center gap-1.5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-4 h-4 text-[#ff4d00]"
+          className="w-4 h-4 text-[#0083d1]"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -86,11 +86,11 @@ export default function ArticleDetail({ post, related }: ArticleDetailProps) {
           aria-label="Breadcrumb"
           className="flex items-center gap-2 text-xs sm:text-sm text-[#475569] mb-6"
         >
-          <Link href="/" className="hover:text-[#ff4d00] transition-colors">
+          <Link href="/" className="hover:text-[#0083d1] transition-colors">
             Home
           </Link>
           <span className="text-gray-300">/</span>
-          <Link href="/blog" className="hover:text-[#ff4d00] transition-colors">
+          <Link href="/blog" className="hover:text-[#0083d1] transition-colors">
             Blog
           </Link>
           <span className="text-gray-300">/</span>
@@ -101,7 +101,7 @@ export default function ArticleDetail({ post, related }: ArticleDetailProps) {
 
         {/* Tag + Title */}
         <div className="mb-6">
-          <span className="inline-block bg-[#fff1ec] border border-[#ff4d00]/20 text-[#ff4d00] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
+          <span className="inline-block bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
             {post.tag}
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#0b1324] leading-[1.15]">
@@ -111,7 +111,7 @@ export default function ArticleDetail({ post, related }: ArticleDetailProps) {
 
         {/* Author + Meta */}
         <div className="flex flex-wrap items-center gap-4 pb-8 border-b border-gray-200">
-          <div className="w-11 h-11 rounded-full bg-[#ff4d00]/10 border border-[#ff4d00]/20 text-[#ff4d00] flex items-center justify-center font-bold text-sm shrink-0">
+          <div className="w-11 h-11 rounded-full bg-[#0083d1]/10 border border-[#0083d1]/20 text-[#0083d1] flex items-center justify-center font-bold text-sm shrink-0">
             {post.author.name
               .split(" ")
               .map((part) => part[0])
@@ -172,7 +172,7 @@ export default function ArticleDetail({ post, related }: ArticleDetailProps) {
                       key={`${post.slug}-b-${index}-${bIndex}`}
                       className="flex items-start gap-3 text-[15px] sm:text-base md:text-[17px] text-[#334155] leading-[1.7]"
                     >
-                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#ff4d00] shrink-0" />
+                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#0083d1] shrink-0" />
                       <span>{bullet}</span>
                     </li>
                   ))}
@@ -180,7 +180,7 @@ export default function ArticleDetail({ post, related }: ArticleDetailProps) {
               )}
 
               {section.quote && (
-                <blockquote className="my-6 border-l-4 border-[#ff4d00] bg-[#fff1ec]/60 rounded-r-2xl px-6 py-5">
+                <blockquote className="my-6 border-l-4 border-[#0083d1] bg-[#e8f4fc]/60 rounded-r-2xl px-6 py-5">
                   <p className="text-base sm:text-lg md:text-xl font-semibold text-[#0b1324] leading-relaxed italic">
                     {section.quote}
                   </p>
@@ -203,7 +203,7 @@ export default function ArticleDetail({ post, related }: ArticleDetailProps) {
           </div>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 bg-[#ff4d00] hover:bg-[#e04300] text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors shrink-0"
+            className="inline-flex items-center justify-center gap-2 bg-[#0083d1] hover:bg-[#006eb0] text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors shrink-0"
           >
             <span>Start a conversation</span>
             <span aria-hidden="true">→</span>
@@ -214,7 +214,7 @@ export default function ArticleDetail({ post, related }: ArticleDetailProps) {
         <div className="mt-8">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#ff4d00] hover:text-[#e04300] transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[#0083d1] hover:text-[#006eb0] transition-colors"
           >
             <span aria-hidden="true">←</span>
             <span>Back to all articles</span>
@@ -246,10 +246,10 @@ export default function ArticleDetail({ post, related }: ArticleDetailProps) {
                     />
                   </div>
                   <div className="p-5 flex flex-col gap-2 flex-1">
-                    <span className="text-[11px] font-semibold uppercase tracking-wider text-[#ff4d00]">
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-[#0083d1]">
                       {item.tag}
                     </span>
-                    <h3 className="text-base sm:text-lg font-bold text-[#0b1324] leading-snug group-hover:text-[#ff4d00] transition-colors line-clamp-2">
+                    <h3 className="text-base sm:text-lg font-bold text-[#0b1324] leading-snug group-hover:text-[#0083d1] transition-colors line-clamp-2">
                       {item.title}
                     </h3>
                     <p className="text-xs text-[#475569] mt-auto pt-2">

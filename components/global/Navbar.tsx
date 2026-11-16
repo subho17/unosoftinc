@@ -59,7 +59,7 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               className={`text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${isActive
-                  ? "text-[#ff4d00] font-semibold border-b-2 border-[#ff4d00] pb-0.5"
+                  ? "text-[#0083d1] font-semibold border-b-2 border-[#0083d1] pb-0.5"
                   : "text-gray-300 hover:text-white"
                 }`}
             >
@@ -73,7 +73,7 @@ export default function Navbar() {
       <div className="hidden lg:flex items-center gap-3 shrink-0">
         <Link
           href="/contact"
-          className="inline-flex items-center gap-1.5 bg-[#ff4d00] hover:bg-[#e04300] text-white text-xs font-semibold px-4 py-2 rounded-full transition-all shadow-md hover:shadow-[#ff4d00]/30 hover:-translate-y-0.5"
+          className="inline-flex items-center gap-1.5 bg-[#0083d1] hover:bg-[#006eb0] text-white text-xs font-semibold px-4 py-2 rounded-full transition-all shadow-md hover:shadow-[#0083d1]/30 hover:-translate-y-0.5"
         >
           <span>Get a Quote</span>
           <span className="text-xs">→</span>

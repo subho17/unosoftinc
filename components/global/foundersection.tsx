@@ -15,7 +15,7 @@ export default function Foundersection() {
             />
 
             {/* Main orange circle + portrait */}
-            <div className="relative w-full h-full rounded-full overflow-hidden bg-[#ff4d00]">
+            <div className="relative w-full h-full rounded-full overflow-hidden bg-[#0083d1]">
               <Image
                 src="/founder.jpg"
                 alt="Founder portrait"
@@ -55,7 +55,7 @@ export default function Foundersection() {
         {/* Right: Content */}
         <div className="max-w-xl mx-auto lg:mx-0">
           <h2 className="text-3xl sm:text-4xl md:text-[44px] font-bold text-[#0b1324] leading-[1.15] tracking-tight">
-            Why You <span className="text-[#ff4d00]">Hire Me</span> for
+            Why You <span className="text-[#0083d1]">Hire Me</span> for
             <br />
             Your Next Projects?
           </h2>
@@ -93,7 +93,7 @@ export default function Foundersection() {
           <div className="mt-9">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2.5 border-[1.5px] border-[#ff4d00] text-[#ff4d00] hover:bg-[#ff4d00] hover:text-white text-sm sm:text-base font-semibold px-8 py-3 rounded-full transition-colors"
+              className="inline-flex items-center gap-2.5 border-[1.5px] border-[#0083d1] text-[#0083d1] hover:bg-[#0083d1] hover:text-white text-sm sm:text-base font-semibold px-8 py-3 rounded-full transition-colors"
             >
               Hire Me
               <svg

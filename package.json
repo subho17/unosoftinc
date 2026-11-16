@@ -7,6 +7,7 @@
     "build": "next build",
     "build:export": "node scripts/build-export.mjs",
     "export": "node scripts/build-export.mjs",
+    "build:standalone": "node scripts/build-standalone.mjs",
     "start": "next start",
     "lint": "eslint"
   },
@@ -14,6 +15,9 @@
     "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "4.3.3",

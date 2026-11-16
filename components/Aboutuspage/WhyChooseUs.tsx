@@ -49,16 +49,16 @@ export default function WhyChooseUs() {
       <div className="w-full max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 bg-[#fff1ec] border border-[#ff4d00]/20 text-[#ff4d00] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+          <div className="inline-flex items-center gap-2 bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
             <span className="tracking-widest uppercase text-[11px] font-bold">
               THE UNOSOFT ADVANTAGE
             </span>
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#0b1324]">
-            Why Forward-Thinking Brands <span className="text-[#ff4d00]">Choose Us</span>
+            Why Forward-Thinking Brands <span className="text-[#0083d1]">Choose Us</span>
           </h2>
           <p className="mt-3 text-xs sm:text-sm text-gray-500 leading-relaxed">
             We are not a bloated legacy agency or an uncoordinated freelance marketplace.
@@ -71,13 +71,13 @@ export default function WhyChooseUs() {
           {differentiators.map((diff) => (
             <div
               key={diff.title}
-              className="bg-white border border-gray-100 rounded-3xl p-7 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-xl hover:border-[#ff4d00]/40 transition-all flex flex-col justify-between"
+              className="bg-white border border-gray-100 rounded-3xl p-7 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-xl hover:border-[#0083d1]/40 transition-all flex flex-col justify-between"
             >
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-[#fff1ec] text-2xl flex items-center justify-center mb-5">
+                <div className="w-12 h-12 rounded-2xl bg-[#e8f4fc] text-2xl flex items-center justify-center mb-5">
                   {diff.icon}
                 </div>
-                <span className="text-[11px] font-bold text-[#ff4d00] uppercase tracking-wider">
+                <span className="text-[11px] font-bold text-[#0083d1] uppercase tracking-wider">
                   {diff.subtitle}
                 </span>
                 <h3 className="text-lg font-bold text-[#0b1324] mt-1 mb-3">
@@ -89,7 +89,7 @@ export default function WhyChooseUs() {
               </div>
 
               <div className="pt-5 mt-5 border-t border-gray-100 flex items-center gap-2 text-xs font-semibold text-[#0b1324]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
                 <span>Enterprise Standard</span>
               </div>
             </div>

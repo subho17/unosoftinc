@@ -21,7 +21,7 @@ export default function Enquiry() {
           setOpen(true);
         }}
         aria-label="Open Quick Enquiry"
-        className="fixed right-0 top-1/2 -translate-y-1/2 z-50 bg-[#ff4d00] hover:bg-[#e04300] text-white font-semibold text-xs tracking-[0.18em] uppercase py-5 px-3 rounded-l-2xl shadow-[-4px_4px_20px_rgba(255,77,0,0.28)] transition-colors cursor-pointer"
+        className="fixed right-0 top-1/2 -translate-y-1/2 z-50 bg-[#0083d1] hover:bg-[#006eb0] text-white font-semibold text-xs tracking-[0.18em] uppercase py-5 px-3 rounded-l-2xl shadow-[-4px_4px_20px_rgba(0,131,209,0.28)] transition-colors cursor-pointer"
       >
         <span className="block [writing-mode:vertical-rl] rotate-180">
           QUICK ENQUIRY
@@ -59,7 +59,7 @@ export default function Enquiry() {
 
             {submitted ? (
               <div className="py-10 text-center space-y-3">
-                <div className="w-12 h-12 rounded-full bg-[#ff4d00]/15 text-[#ff4d00] flex items-center justify-center mx-auto text-xl font-bold">
+                <div className="w-12 h-12 rounded-full bg-[#0083d1]/15 text-[#0083d1] flex items-center justify-center mx-auto text-xl font-bold">
                   ✓
                 </div>
                 <h4 className="text-lg font-bold text-[#0b1324]">
@@ -71,7 +71,7 @@ export default function Enquiry() {
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
-                  className="mt-2 bg-[#ff4d00] hover:bg-[#e04300] text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors cursor-pointer"
+                  className="mt-2 bg-[#0083d1] hover:bg-[#006eb0] text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors cursor-pointer"
                 >
                   Close
                 </button>
@@ -86,7 +86,7 @@ export default function Enquiry() {
                     type="text"
                     required
                     placeholder="Your full name"
-                    className="w-full rounded-xl border border-gray-200 px-3.5 py-2.5 text-sm text-[#0b1324] placeholder:text-gray-400 focus:outline-none focus:border-[#ff4d00]"
+                    className="w-full rounded-xl border border-gray-200 px-3.5 py-2.5 text-sm text-[#0b1324] placeholder:text-gray-400 focus:outline-none focus:border-[#0083d1]"
                   />
                 </div>
 
@@ -98,7 +98,7 @@ export default function Enquiry() {
                     type="email"
                     required
                     placeholder="you@example.com"
-                    className="w-full rounded-xl border border-gray-200 px-3.5 py-2.5 text-sm text-[#0b1324] placeholder:text-gray-400 focus:outline-none focus:border-[#ff4d00]"
+                    className="w-full rounded-xl border border-gray-200 px-3.5 py-2.5 text-sm text-[#0b1324] placeholder:text-gray-400 focus:outline-none focus:border-[#0083d1]"
                   />
                 </div>
 
@@ -110,13 +110,13 @@ export default function Enquiry() {
                     rows={3}
                     required
                     placeholder="Briefly describe your requirements..."
-                    className="w-full rounded-xl border border-gray-200 px-3.5 py-2.5 text-sm text-[#0b1324] placeholder:text-gray-400 focus:outline-none focus:border-[#ff4d00] resize-none"
+                    className="w-full rounded-xl border border-gray-200 px-3.5 py-2.5 text-sm text-[#0b1324] placeholder:text-gray-400 focus:outline-none focus:border-[#0083d1] resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-[#ff4d00] hover:bg-[#e04300] text-white text-sm font-semibold py-3 rounded-full transition-colors cursor-pointer"
+                  className="w-full bg-[#0083d1] hover:bg-[#006eb0] text-white text-sm font-semibold py-3 rounded-full transition-colors cursor-pointer"
                 >
                   Send Enquiry
                 </button>

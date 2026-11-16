@@ -19,7 +19,7 @@ function MascotSvg() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 120 130"
-      className="w-16 h-16 sm:w-20 sm:h-20 drop-shadow-[0_8px_16px_rgba(255,77,0,0.28)]"
+      className="w-16 h-16 sm:w-20 sm:h-20 drop-shadow-[0_8px_16px_rgba(0,131,209,0.28)]"
       aria-hidden="true"
     >
       {/* Ground shadow */}
@@ -32,7 +32,7 @@ function MascotSvg() {
         width="11"
         height="22"
         rx="5.5"
-        fill="#ff520d"
+        fill="#0083d1"
         className="chatbot-arm-left"
       />
       <rect
@@ -41,7 +41,7 @@ function MascotSvg() {
         width="11"
         height="22"
         rx="5.5"
-        fill="#ff520d"
+        fill="#0083d1"
         className="chatbot-arm-right"
       />
 
@@ -52,7 +52,7 @@ function MascotSvg() {
         width="11"
         height="16"
         rx="5.5"
-        fill="#ff520d"
+        fill="#0083d1"
         className="chatbot-leg-left"
       />
       <rect
@@ -61,14 +61,14 @@ function MascotSvg() {
         width="11"
         height="16"
         rx="5.5"
-        fill="#ff520d"
+        fill="#0083d1"
         className="chatbot-leg-right"
       />
 
       {/* Torso */}
       <path
         d="M42 96 C42 82, 78 82, 78 96 L78 104 C78 107, 42 107, 42 104 Z"
-        fill="#ff520d"
+        fill="#0083d1"
       />
 
       {/* Left & Right dark ear pieces */}
@@ -78,7 +78,7 @@ function MascotSvg() {
       {/* Orange head with top-right cowlick spike */}
       <path
         d="M21 50 C21 26, 36 20, 56 18 L86 8 C89 7, 91 10, 88 15 L84 22 C95 27, 99 36, 99 50 L99 61 C99 78, 86 86, 60 86 C34 86, 21 78, 21 61 Z"
-        fill="#ff520d"
+        fill="#0083d1"
       />
 
       {/* Dark visor face */}
@@ -221,7 +221,7 @@ export default function Chatbot() {
             {/* Header */}
             <div className="bg-[#1e1e1e] px-5 py-4 border-b border-white/10 flex items-center justify-between">
               <div className="flex items-center gap-2.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#ff4d00] animate-pulse" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#0083d1] animate-pulse" />
                 <div>
                   <h3 className="text-sm font-bold text-white leading-none">
                     Studio Assistant
@@ -235,7 +235,7 @@ export default function Chatbot() {
                 type="button"
                 onClick={() => setOpen(false)}
                 aria-label="Close chat"
-                className="w-7 h-7 rounded-full bg-[#262626] hover:bg-[#ff4d00] text-gray-300 hover:text-white flex items-center justify-center text-xs transition-colors cursor-pointer"
+                className="w-7 h-7 rounded-full bg-[#262626] hover:bg-[#0083d1] text-gray-300 hover:text-white flex items-center justify-center text-xs transition-colors cursor-pointer"
               >
                 ✕
               </button>
@@ -253,7 +253,7 @@ export default function Chatbot() {
                   <div
                     className={`max-w-[82%] rounded-2xl px-3.5 py-2.5 leading-relaxed ${
                       msg.sender === "user"
-                        ? "bg-[#ff4d00] text-white rounded-br-xs"
+                        ? "bg-[#0083d1] text-white rounded-br-xs"
                         : "bg-[#262626] text-gray-200 border border-white/10 rounded-bl-xs"
                     }`}
                   >
@@ -270,7 +270,7 @@ export default function Chatbot() {
                   key={chip}
                   type="button"
                   onClick={() => sendMessage(chip)}
-                  className="text-[11px] bg-[#262626] hover:bg-[#ff4d00] border border-white/10 text-gray-200 hover:text-white px-2.5 py-1 rounded-full transition-colors cursor-pointer"
+                  className="text-[11px] bg-[#262626] hover:bg-[#0083d1] border border-white/10 text-gray-200 hover:text-white px-2.5 py-1 rounded-full transition-colors cursor-pointer"
                 >
                   {chip}
                 </button>
@@ -288,11 +288,11 @@ export default function Chatbot() {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Type a message..."
                 aria-label="Type a message"
-                className="flex-1 min-w-0 bg-[#262626] border border-white/10 rounded-full px-3.5 py-2 text-xs text-white placeholder:text-gray-400 focus:outline-none focus:border-[#ff4d00]"
+                className="flex-1 min-w-0 bg-[#262626] border border-white/10 rounded-full px-3.5 py-2 text-xs text-white placeholder:text-gray-400 focus:outline-none focus:border-[#0083d1]"
               />
               <button
                 type="submit"
-                className="bg-[#ff4d00] hover:bg-[#e04300] text-white text-xs font-semibold px-4 py-2 rounded-full transition-colors cursor-pointer shrink-0"
+                className="bg-[#0083d1] hover:bg-[#006eb0] text-white text-xs font-semibold px-4 py-2 rounded-full transition-colors cursor-pointer shrink-0"
               >
                 Send
               </button>
@@ -309,7 +309,7 @@ export default function Chatbot() {
             className="animate-chatbot-jump relative flex flex-col items-center cursor-pointer focus:outline-none group"
           >
             {!open && (
-              <span className="mb-1 bg-[#141414] text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow-lg border border-white/15 whitespace-nowrap group-hover:bg-[#ff4d00] transition-colors">
+              <span className="mb-1 bg-[#141414] text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow-lg border border-white/15 whitespace-nowrap group-hover:bg-[#0083d1] transition-colors">
                 Hello! 👋
               </span>
             )}

@@ -3,7 +3,7 @@ interface ExperienceItem {
     period: string;
     role: string;
     description: string;
-    accent: "orange" | "dark";
+    accent: "blue" | "dark";
 }
 
 const experiences: ExperienceItem[] = [
@@ -13,7 +13,7 @@ const experiences: ExperienceItem[] = [
         role: "Visual Designer",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-        accent: "orange",
+        accent: "blue",
     },
     {
         company: "Insightrancer",
@@ -29,7 +29,7 @@ const experiences: ExperienceItem[] = [
         role: "Web Designer",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-        accent: "orange",
+        accent: "blue",
     },
     {
         company: "KG Design Studio",
@@ -37,7 +37,7 @@ const experiences: ExperienceItem[] = [
         role: "Web Designer",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-        accent: "orange",
+        accent: "blue",
     },
 ];
 
@@ -50,7 +50,7 @@ export default function Experincepage() {
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0b1324] tracking-tight">
                         My Work Experience
                     </h2>
-                    <div className="w-28 h-1 bg-[#ff4d00] mx-auto mt-4 rounded-full" />
+                    <div className="w-28 h-1 bg-[#0083d1] mx-auto mt-4 rounded-full" />
                 </div>
 
                 {/* Timeline */}
@@ -92,14 +92,14 @@ export default function Experincepage() {
 
                                     {/* Outer halo + white border + colored core */}
                                     <div
-                                        className={`relative z-10 mt-1 w-10 h-10 rounded-full flex items-center justify-center ${item.accent === "orange"
-                                            ? "bg-[#ff4d00]/25"
+                                        className={`relative z-10 mt-1 w-10 h-10 rounded-full flex items-center justify-center ${item.accent === "blue"
+                                            ? "bg-[#0083d1]/25"
                                             : "bg-[#333b48]/20"
                                             }`}
                                     >
                                         <div
-                                            className={`w-6 h-6 rounded-full border-[3px] border-white shadow-xs ${item.accent === "orange"
-                                                ? "bg-[#ff4d00]"
+                                            className={`w-6 h-6 rounded-full border-[3px] border-white shadow-xs ${item.accent === "blue"
+                                                ? "bg-[#0083d1]"
                                                 : "bg-[#2f3640]"
                                                 }`}
                                         />

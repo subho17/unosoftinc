@@ -90,15 +90,15 @@ export default function PortfolioSection() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/15 text-[#ff4d00] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00] animate-pulse" />
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/15 text-[#0083d1] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1] animate-pulse" />
               <span className="text-white tracking-widest uppercase text-[11px] font-bold">
                 FEATURED WORK
               </span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
-              Selected <span className="text-[#ff4d00]">Portfolio</span>
+              Selected <span className="text-[#0083d1]">Portfolio</span>
             </h2>
           </div>
 
@@ -108,7 +108,7 @@ export default function PortfolioSection() {
               type="button"
               onClick={scrollLeft}
               aria-label="Scroll left"
-              className="w-12 h-12 rounded-full border border-white/20 hover:border-[#ff4d00] bg-white/5 hover:bg-[#ff4d00] text-white flex items-center justify-center transition-all cursor-pointer shadow-md"
+              className="w-12 h-12 rounded-full border border-white/20 hover:border-[#0083d1] bg-white/5 hover:bg-[#0083d1] text-white flex items-center justify-center transition-all cursor-pointer shadow-md"
             >
               ←
             </button>
@@ -116,7 +116,7 @@ export default function PortfolioSection() {
               type="button"
               onClick={scrollRight}
               aria-label="Scroll right"
-              className="w-12 h-12 rounded-full border border-white/20 hover:border-[#ff4d00] bg-white/5 hover:bg-[#ff4d00] text-white flex items-center justify-center transition-all cursor-pointer shadow-md"
+              className="w-12 h-12 rounded-full border border-white/20 hover:border-[#0083d1] bg-white/5 hover:bg-[#0083d1] text-white flex items-center justify-center transition-all cursor-pointer shadow-md"
             >
               →
             </button>
@@ -132,7 +132,7 @@ export default function PortfolioSection() {
               onClick={() => setActiveFilter(cat)}
               className={`text-xs sm:text-sm font-semibold px-4 py-2 rounded-full transition-all cursor-pointer ${
                 activeFilter === cat
-                  ? "bg-[#ff4d00] text-white shadow-md"
+                  ? "bg-[#0083d1] text-white shadow-md"
                   : "bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white"
               }`}
             >
@@ -166,7 +166,7 @@ export default function PortfolioSection() {
 
                 {/* Top Badge */}
                 <div className="absolute top-5 left-5 right-5 flex items-center justify-between z-10">
-                  <span className="text-[11px] font-bold uppercase tracking-wider bg-black/60 backdrop-blur-md border border-white/15 px-3 py-1 rounded-full text-[#ff4d00]">
+                  <span className="text-[11px] font-bold uppercase tracking-wider bg-black/60 backdrop-blur-md border border-white/15 px-3 py-1 rounded-full text-[#0083d1]">
                     {project.category}
                   </span>
                   <span className="text-xs font-semibold text-white/80 bg-black/40 px-2.5 py-1 rounded-full">
@@ -179,7 +179,7 @@ export default function PortfolioSection() {
                   <span className="text-[11px] text-gray-400 font-medium block">
                     Client: {project.client}
                   </span>
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white leading-snug group-hover:text-[#ff4d00] transition-colors">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white leading-snug group-hover:text-[#0083d1] transition-colors">
                     {project.title}
                   </h3>
                 </div>

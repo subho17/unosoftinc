@@ -6,12 +6,12 @@ export default function ServiceCTA() {
   return (
     <section className="sticky top-0 z-40 w-full min-h-screen bg-white py-16 sm:py-20 md:py-24 px-4 sm:px-8 md:px-12 flex flex-col justify-center overflow-hidden border-t border-gray-100">
       {/* Ambient background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[400px] bg-gradient-to-tr from-[#ff4d00]/12 via-[#ff8c5a]/8 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[400px] bg-gradient-to-tr from-[#0083d1]/12 via-[#3ba2e3]/8 to-transparent rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 w-full max-w-5xl mx-auto text-center space-y-8">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-[#fff1ec] border border-[#ff4d00]/25 text-[#ff4d00] text-xs font-semibold px-4 py-1.5 rounded-full">
-          <span className="w-2 h-2 rounded-full bg-[#ff4d00] animate-pulse" />
+        <div className="inline-flex items-center gap-2 bg-[#e8f4fc] border border-[#0083d1]/25 text-[#0083d1] text-xs font-semibold px-4 py-1.5 rounded-full">
+          <span className="w-2 h-2 rounded-full bg-[#0083d1] animate-pulse" />
           <span className="tracking-widest uppercase text-[11px] font-bold">
             START YOUR PROJECT
           </span>
@@ -21,7 +21,7 @@ export default function ServiceCTA() {
         <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#0b1324] leading-tight">
           Have a Project in Mind?{" "}
           <br className="hidden sm:block" />
-          <span className="text-[#ff4d00]">Let&apos;s Build It Together.</span>
+          <span className="text-[#0083d1]">Let&apos;s Build It Together.</span>
         </h2>
 
         {/* Subtitle */}
@@ -35,7 +35,7 @@ export default function ServiceCTA() {
         <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#ff4d00] hover:bg-[#e04300] text-white text-xs sm:text-sm font-semibold px-8 py-3.5 rounded-full transition-all shadow-lg hover:shadow-[#ff4d00]/25 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 bg-[#0083d1] hover:bg-[#006eb0] text-white text-xs sm:text-sm font-semibold px-8 py-3.5 rounded-full transition-all shadow-lg hover:shadow-[#0083d1]/25 hover:-translate-y-0.5"
           >
             <span>Get a Free Proposal</span>
             <span className="text-base">→</span>

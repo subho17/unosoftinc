@@ -33,12 +33,12 @@ export default function AboutUnoSoft() {
     <section className="w-full bg-white py-16 sm:py-20 md:py-24 px-4 sm:px-8 md:px-12 border-b border-gray-100">
       <div className="w-full max-w-6xl mx-auto">
         {/* Header Badge */}
-        <div className="inline-flex items-center gap-2 bg-[#fff1ec] border border-[#ff4d00]/20 text-[#ff4d00] text-xs font-semibold px-4 py-1.5 rounded-full mb-6">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+        <div className="inline-flex items-center gap-2 bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] text-xs font-semibold px-4 py-1.5 rounded-full mb-6">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
           <span className="tracking-widest uppercase text-[11px] font-bold">
             WHO WE ARE • STORYTELLING
           </span>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1]" />
         </div>
 
         {/* 2-Column Layout with Sticky Storytelling */}
@@ -47,7 +47,7 @@ export default function AboutUnoSoft() {
           <div className="lg:col-span-7 space-y-12">
             <div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#0b1324] leading-[1.2]">
-                Pioneering <span className="text-[#ff4d00]">Digital Solutions</span>{" "}
+                Pioneering <span className="text-[#0083d1]">Digital Solutions</span>{" "}
                 for Forward-Thinking Enterprises.
               </h2>
               <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -57,17 +57,17 @@ export default function AboutUnoSoft() {
             </div>
 
             {/* Chapters list */}
-            <div className="space-y-8 relative before:absolute before:inset-0 before:left-5 before:w-0.5 before:bg-gradient-to-b before:from-[#ff4d00] before:via-gray-200 before:to-transparent pl-4">
+            <div className="space-y-8 relative before:absolute before:inset-0 before:left-5 before:w-0.5 before:bg-gradient-to-b before:from-[#0083d1] before:via-gray-200 before:to-transparent pl-4">
               {chapters.map((ch) => (
                 <div
                   key={ch.step}
                   className="relative pl-8 transition-all duration-300 group"
                 >
-                  <span className="absolute left-0 top-1.5 w-10 h-10 -ml-5 rounded-full bg-white border-2 border-[#ff4d00] text-[#ff4d00] font-extrabold text-xs flex items-center justify-center shadow-sm group-hover:bg-[#ff4d00] group-hover:text-white transition-colors">
+                  <span className="absolute left-0 top-1.5 w-10 h-10 -ml-5 rounded-full bg-white border-2 border-[#0083d1] text-[#0083d1] font-extrabold text-xs flex items-center justify-center shadow-sm group-hover:bg-[#0083d1] group-hover:text-white transition-colors">
                     {ch.step}
                   </span>
 
-                  <span className="text-[11px] font-bold text-[#ff4d00] uppercase tracking-wider block">
+                  <span className="text-[11px] font-bold text-[#0083d1] uppercase tracking-wider block">
                     {ch.title}
                   </span>
                   <h3 className="text-xl sm:text-2xl font-bold text-[#0b1324] mt-1 mb-2.5">
@@ -83,7 +83,7 @@ export default function AboutUnoSoft() {
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 bg-[#ff4d00] hover:bg-[#e04300] text-white text-xs sm:text-sm font-semibold px-7 py-3 rounded-full transition-all shadow-md hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 bg-[#0083d1] hover:bg-[#006eb0] text-white text-xs sm:text-sm font-semibold px-7 py-3 rounded-full transition-all shadow-md hover:-translate-y-0.5"
               >
                 <span>Explore Capabilities</span>
                 <span>→</span>
@@ -99,13 +99,13 @@ export default function AboutUnoSoft() {
 
           {/* Right Column: Sticky Impact Card */}
           <div className="lg:col-span-5 sticky top-28 bg-gradient-to-br from-[#0b1324] via-[#111a2e] to-[#0b1324] text-white rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden border border-white/10">
-            <div className="absolute top-0 right-0 w-48 h-48 bg-[#ff4d00]/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-48 h-48 bg-[#0083d1]/20 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative z-10 space-y-8">
               <div className="border-b border-white/10 pb-5">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-xs font-semibold text-[#ff4d00] uppercase tracking-wider">
+                  <span className="text-xs font-semibold text-[#0083d1] uppercase tracking-wider">
                     Live Telemetry &amp; Impact
                   </span>
                 </div>
@@ -117,7 +117,7 @@ export default function AboutUnoSoft() {
               <div className="grid grid-cols-2 gap-6 sm:gap-8">
                 {stats.map((stat) => (
                   <div key={stat.label} className="space-y-1">
-                    <div className="text-3xl sm:text-4xl font-extrabold text-[#ff4d00] tracking-tight">
+                    <div className="text-3xl sm:text-4xl font-extrabold text-[#0083d1] tracking-tight">
                       {stat.value}
                     </div>
                     <div className="text-xs text-gray-300 leading-snug">
@@ -128,7 +128,7 @@ export default function AboutUnoSoft() {
               </div>
 
               <div className="pt-4 border-t border-white/10 flex items-center gap-3 text-xs text-gray-300">
-                <span className="w-2 h-2 rounded-full bg-[#ff4d00]" />
+                <span className="w-2 h-2 rounded-full bg-[#0083d1]" />
                 <span>Enterprise SLA • Continuous Delivery</span>
               </div>
             </div>

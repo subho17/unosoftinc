@@ -44,15 +44,15 @@ export default function OurApproach() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           {/* Left Column: Sticky Process Overview & Animated Timeline Tracker */}
           <div className="lg:col-span-5 sticky top-28 bg-[#fbfbfe] border border-gray-200/80 rounded-3xl p-8 sm:p-9 shadow-sm">
-            <div className="inline-flex items-center gap-2 bg-[#fff1ec] border border-[#ff4d00]/20 text-[#ff4d00] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff4d00] animate-pulse" />
+            <div className="inline-flex items-center gap-2 bg-[#e8f4fc] border border-[#0083d1]/20 text-[#0083d1] text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0083d1] animate-pulse" />
               <span className="tracking-widest uppercase text-[11px] font-bold">
                 STICKY PROCESS &amp; TIMELINE
               </span>
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#0b1324] leading-tight">
-              Our Battle-Tested <span className="text-[#ff4d00]">Approach</span>
+              Our Battle-Tested <span className="text-[#0083d1]">Approach</span>
             </h2>
 
             <p className="mt-3 text-xs sm:text-sm text-gray-600 leading-relaxed">
@@ -64,7 +64,7 @@ export default function OurApproach() {
             <div className="mt-8 space-y-3.5 pt-6 border-t border-gray-200/70">
               {steps.map((item) => (
                 <div key={item.step} className="flex items-center gap-3">
-                  <span className="w-6 h-6 rounded-full bg-[#ff4d00] text-white text-[10px] font-bold flex items-center justify-center shrink-0">
+                  <span className="w-6 h-6 rounded-full bg-[#0083d1] text-white text-[10px] font-bold flex items-center justify-center shrink-0">
                     {item.step}
                   </span>
                   <span className="text-xs font-semibold text-[#0b1324]">
@@ -78,25 +78,25 @@ export default function OurApproach() {
             </div>
 
             <div className="mt-8 p-4 rounded-2xl bg-white border border-gray-200/80 text-xs text-gray-600 leading-relaxed shadow-xs">
-              <span className="text-[#ff4d00] font-bold">100% Transparency:</span> Staging links, code commits, and PR reviews are updated live inside your dedicated client workspace.
+              <span className="text-[#0083d1] font-bold">100% Transparency:</span> Staging links, code commits, and PR reviews are updated live inside your dedicated client workspace.
             </div>
           </div>
 
           {/* Right Column: Animated Step Cards Timeline */}
-          <div className="lg:col-span-7 space-y-6 relative before:absolute before:inset-0 before:left-7 before:w-0.5 before:bg-gradient-to-b before:from-[#ff4d00] via-[#ff4d00]/40 before:to-gray-200 pl-2">
+          <div className="lg:col-span-7 space-y-6 relative before:absolute before:inset-0 before:left-7 before:w-0.5 before:bg-gradient-to-b before:from-[#0083d1] via-[#0083d1]/40 before:to-gray-200 pl-2">
             {steps.map((item) => (
               <div
                 key={item.step}
                 className="relative pl-10 group"
               >
                 {/* Glowing Timeline Marker */}
-                <span className="absolute left-0 top-6 w-9 h-9 -ml-4.5 rounded-full bg-white border-2 border-[#ff4d00] text-[#ff4d00] font-bold text-xs flex items-center justify-center shadow-md group-hover:bg-[#ff4d00] group-hover:text-white transition-all group-hover:scale-110">
+                <span className="absolute left-0 top-6 w-9 h-9 -ml-4.5 rounded-full bg-white border-2 border-[#0083d1] text-[#0083d1] font-bold text-xs flex items-center justify-center shadow-md group-hover:bg-[#0083d1] group-hover:text-white transition-all group-hover:scale-110">
                   {item.step}
                 </span>
 
-                <div className="bg-white border border-gray-200/90 rounded-3xl p-7 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-xl hover:border-[#ff4d00]/50 transition-all">
+                <div className="bg-white border border-gray-200/90 rounded-3xl p-7 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-xl hover:border-[#0083d1]/50 transition-all">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-[11px] font-bold text-[#ff4d00] uppercase tracking-wider">
+                    <span className="text-[11px] font-bold text-[#0083d1] uppercase tracking-wider">
                       {item.phase}
                     </span>
                     <span className="text-xs font-semibold bg-gray-100 text-gray-700 px-3 py-1 rounded-full">
@@ -121,7 +121,7 @@ export default function OurApproach() {
                       {item.deliverables.map((deliv) => (
                         <span
                           key={deliv}
-                          className="text-[11px] bg-[#fff1ec] text-[#0b1324] px-2.5 py-1 rounded-md border border-[#ff4d00]/15"
+                          className="text-[11px] bg-[#e8f4fc] text-[#0b1324] px-2.5 py-1 rounded-md border border-[#0083d1]/15"
                         >
                           ✓ {deliv}
                         </span>
